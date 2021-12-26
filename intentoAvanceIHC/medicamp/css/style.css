@@ -41,7 +41,6 @@ Table Of Contents
 /************************************
  01)Common CSS 
 *************************************/
-
 .alignleft {
     float: left;
     margin-right: 15px;
@@ -378,6 +377,7 @@ p {
 .dropdown-menu .divider {
     margin: 0;
 }
+
 
 .dropdown-menu>li>a { /* color de fondo de opciones de menu en vertical al pulsar sobre opción original */
     font-size: 12px;
@@ -1378,7 +1378,7 @@ p {
 }
 
 .box-horario {
-    position: absolute;
+    /*position: absolute;*/
     top: -75px;
     bottom: 0px;
     left: 0px;
@@ -1404,7 +1404,7 @@ p {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1701,6 +1701,10 @@ p {
 .inner-title h2 {
     color: #fff;
     ;
+}
+
+.inner-title-login{
+    background-color: white;
 }
 
 .breadcrumbs ul {
@@ -2023,4 +2027,128 @@ p {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 12px;
     font-weight: 600;
+}
+
+/* Login */
+.container-login, .container-forgotten-password{
+    width: 320px;
+    background: #e0fffb;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+}
+
+.container-login{
+    height: 380px;
+}
+
+.container-forgotten-password{
+    height: 420px;
+}
+
+.container-login .logo-favicon,
+.container-forgotten-password .logo-favicon,
+.container-aseguramiento .logo-favicon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 20px);
+}
+
+.container-login h4,
+.container-forgotten-password h4,
+.container-aseguramiento h4{
+    margin: 0;
+    padding: 0 0 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.container-login label,
+.container-forgotten-password label,
+.container-aseguramiento label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.container-login input,
+.container-forgotten-password input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container-login input[type="text"],
+.container-login input[type="password"],
+.container-login input[type="email"],
+.container-forgotten-password input[type="text"],
+.container-forgotten-password input[type="password"],
+.container-forgotten-password input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+}
+
+.container-login input[type="submit"],
+.container-forgotten-password input[type="submit"],
+.container-aseguramiento form input[type="submit"],
+.container-aseguramiento form input[type="button"],
+.container-aseguramiento form button{
+    border: none;
+    outline: none;
+    background-color: #00aef0;
+    color: white;
+    border-radius: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.container-login a,
+.container-forgotten-password a{
+    text-decoration: none;
+    line-height: 20px;
+    color: dark grey;
+}
+
+/* Formulario Asegurarse MediSalud */
+.container-aseguramiento{
+    width: 75%;
+    background: #e0fffb;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+}
+
+.container-aseguramiento div{
+    display: inline-block;
+}
+
+.container-aseguramiento label{
+    display: block;
+}
+
+#seleccion-distrito{
+    width: 180px !important;
+}
+
+.botones-form-registro input[type="submit"],
+.botones-form-registro input[type="button"]{
+    background-color: #00aef0;
+    color: white;
+    height: 30px;
 }
