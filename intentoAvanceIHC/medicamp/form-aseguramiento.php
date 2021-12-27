@@ -8,6 +8,16 @@
         //conectar a la base de datos
         $db = conectarDB();
        
+            $nombres = '';
+            $apellidos = '';
+            $dni = '';
+            $direccion = '';
+            $telefono = '';
+            $correo = '';
+            $contraseña = '';
+            $genero = '';
+            $distrito = '';
+            $fechaNacimiento = '';
 
         if($_SERVER['REQUEST_METHOD'] ==='POST'){
 
@@ -17,6 +27,10 @@
             $direccion = $_POST['direccion'];
             $telefono = $_POST['telefono'];
             $correo = $_POST['correo'];
+            $contraseña = $_POST['contraseña'];
+            $genero = $_POST['genero'];
+            $distrito = $_POST['distrito'];
+            $fechaNacimiento = $_POST['fechaNacimiento'];
 
             if(!$nombres){
               $errores[]="Debe de completar su nombre";
@@ -36,20 +50,43 @@
             if(!$correo){
                 $errores[] = "Su correo es obligatorio";
             }
-            if(!$vendedor){
-                $errores[] = "Debe de seleccionar al vendedor";
+            if(!$contraseña){
+              $errores[] = "Su contraseña es obligatorio";
             }
+            if(!$genero){
+              $errores[] = "El genero es obligatorio";
+            }
+            if(!$distrito){
+              $errores[] = "El distrito es obligatorio";
+            }
+            if(!$fechaNacimiento){
+              $errores[] = "La fecha de nacimiento es obligatoria";
+            }
+
             
             if(empty($errores)){
-              //INSERTAR
-              $query = "INSERT INTO asegurados (nombres,apellidos,dni,direccion,telefono,correo,vendedor) VALUES ('$nombres','$apellidos','$dni','$direccion','$telefono','$correo','$vendedor')";
-              echo $query;
-              $resultado = mysqli_query($db,$query);
-            }
+               //INSERTAR
+               $query = "INSERT INTO asegurados (Nombre_Asegurado,Apellido_Asegurado,DNI_Asegurado,Telefono_Asegurado,Genero_Asegurado,Fecha_Nacimiento,Distrito_Asegurado,Direccion_Asegurado,Correo_Asegurado,Contrasenia_Asegurado) VALUES ('$nombres','$apellidos','$dni','$telefono','$genero','$fechaNacimiento','$distrito','$direccion','$correo','$contraseña')";
+
+               echo $query;
+               $resultado = mysqli_query($db,$query);
+
+               if($resultado){
+                  $nombres = '';
+                  $apellidos = '';
+                  $dni = '';
+                  $direccion = '';
+                  $telefono = '';
+                  $correo = '';
+                  $contraseña = '';
+                  $genero = '';
+                  $distrito = '';
+                  $fechaNacimiento = '';
+              }
+             }
         }
-
-
 ?>
+
 
 <section id="inner-title" class="inner-title">
   <div class="container">
@@ -69,6 +106,14 @@
 </section> 
 --->
 <br>
+
+<?php foreach ($errores as $error): ?>
+  <div class="error">
+    <?php echo $error; ?>
+  </div>
+<?php endforeach; ?>
+
+
 <script src="js/add-remove-form.js"></script>
 <section class="inner-title-login">
   <div class="container">
@@ -79,25 +124,31 @@
             <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
             <h4>Formulario Único de Seguro de MediSalud</h4>
               <div id="form-asegurado">
-                <form class="" action="" method="POST" action="/form-aseguramiento.php">
+                <form method="POST" action="/form-aseguramiento.php">
                   <fieldset> <!--- FORMULARIO DEL TITULAR (ASEGURADO)-->
                     <legend>Datos del Titular</legend>
                       <div style="margin-right: 18px; padding-bottom: 15px;">
                         <label for="nombres">Nombres</label>
-                          <input type="text" size="25" style="text-transform:uppercase" id="nombres" name="nombres">
+                        <input type="text" size="25" style="text-transform:uppercase" id="nombres" name="nombres" value="<?php echo $nombres ?>">
                       </div>
                       <div style="margin-right: 20px; padding-bottom: 15px;">
                         <label for="apellidos">Apellidos</label>
-                        <input type="text" size="30" style="text-transform:uppercase" id="apellidos" name="apellidos">
+                        <input type="text" size="30" style="text-transform:uppercase" id="apellidos" name="apellidos" value="<?php echo $apellidos ?>">
                       </div>
         
                       <div style="margin-right: 20px; padding-bottom: 15px;">
                         <label for="dni">DNI</label>
-                        <input type="text" size="12" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required id="dni" name="dni">
+                        <input type="text" size="12" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required id="dni" name="dni" value="<?php echo $dni ?>">
                       </div>
 
                       <div>
-                        <div>
+                        <label for="genero">Genero</label>
+                        <select name="genero" id="genero">
+                          <option selected disabled>-------</option>
+                          <option value="masculino">Masculino</option>
+                          <option value="femenino">Femenino</option>
+                        </select>
+                        <!-- <div>
                           <input type="radio" id="masculino" name="genero" value="masculino" >
                           <label for="masculino">Masculino</label>
                         </div>
@@ -105,18 +156,19 @@
                         <div>
                           <input type="radio" id="femenino" name="genero" value="femenino">
                           <label for="femenino">Femenino</label>
-                        </div>
+                        </div> -->
                       </div>
             
                       <div style="margin-right: 20px; padding-bottom: 15px;">
                         <label for="direccion">Dirección</label>
-                        <input type="text" size="35" style="text-transform:uppercase" id="direccion" name="direccion">
+                        <input type="text" size="35" style="text-transform:uppercase" id="direccion" name="direccion" value="<?php echo $direccion ?>" >
                       </div>
         
                       <div style="margin-right: 20px; padding-bottom: 15px;">
                         <label for="distrito">Distrito</label>
-                        <select name="seleccion-distrito" style="height: 25px" id="seleccion-distrito">
+                        <select name="distrito" style="height: 25px" id="distrito">
                                   <!--- <option>---</option> --->
+                          <option value="" disabled selected>--------</option>
                           <option value="Ancón">Ancón</option>
                           <option value="Ate">Ate</option>
                           <option value="Barranco">Barranco</option>
@@ -165,18 +217,18 @@
                         </div>
                           <div style="margin-right: 20px; padding-bottom: 15px;">
                             <label style="padding-top: 0px;" for="numero-telefono">Teléfono/Celular</label>
-                            <input type="text" maxlength="9" size="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required id="numero-telefono" name="telefono">  
+                            <input type="text" maxlength="9" size="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required id="numero-telefono" name="telefono" value="<?php echo $telefono ?>">  
                           </div>
                           
                           <div style="margin-right: 20px; padding-bottom: 15px;">
                             <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                            <input id="datefield" type='date' min="1900-01-01" max="2000-13-13" size="4" style="height: 25px">
+                            <input id="datefield" type='date' min="1900-01-01" max="2000-13-13" size="4" style="height: 25px" name="fechaNacimiento">
                           </div>
                         </div>       
                 
                         <div style="margin-right: 20px; padding-bottom: 15px;">
                           <label for="correo">Correo Electrónico</label>
-                          <input type="email" size="30" id="correo" name="correo">
+                          <input type="email" size="30" id="correo" name="correo" value="<?php echo $correo ?>">
                         </div>
 
                        <script src="js/password-form.js"></script>
@@ -185,16 +237,18 @@
                         <input id="password-form" size="22" type='password' minlength="8" maxlength="16" onkeyup = "verificarContra(); return false;" style="height: 25px" id="password-form" name="contraseña">
                         <div id="mensaje-error-password"></div>
                       </div>
+                     
                   </fieldset>
+                  <div class="botones-form-registro">
+                        <input type="submit" value="Registrar al Seguro">
+                        <input id="add" type="button" value="Asegurar un familiar" onclick="addNew()" />
+                        <input id="remove" type="button" value="Quitar este formulario de familiar" onclick="removeLastElem()" style="visibility: hidden;"/>
+                      </div>
               </form>
             </div>
-            <div id="target">
+              <div id="target">
             </div>
-            <div class="botones-form-registro">
-              <input type="submit" value="Registrar al Seguro" onclick="">
-              <input id="add" type="button" value="Asegurar un familiar" onclick="addNew()" />
-              <input id="remove" type="button" value="Quitar este formulario de familiar" onclick="removeLastElem()" style="visibility: hidden;"/>
-            </div>
+            
           </div>
         </div>  
       </div>

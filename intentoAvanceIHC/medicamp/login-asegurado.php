@@ -1,20 +1,46 @@
 <?php  
         require 'includes/config/database.php';
-        include 'includes/templates/header.php';
-
         $db = conectarDB();
-        //consultar para obtener los vendedores
-        $consulta = "SELECT * FROM vendedores"; //prueba
-        $resultado = mysqli_query($db, $consulta);
+        $errores = [];
 
         //validacion
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+          $correo = $_POST['correo'];
+          $contrasenia = $_POST['contrasenia'];
 
+          if(!$correo){
+            $errores[] = "Debe de completar el nombre de usuario";
+          }
+          if(!$contrasenia){
+            $errores[] = "Debe de completar su contraseña";
+          }
+
+          if(empty($errores)){
+            $query = "SELECT Correo_Asegurado,Contrasenia_Asegurado FROM asegurados WHERE Correo_Asegurado = '$correo' AND Contrasenia_Asegurado = '$contrasenia'";
+            $resultado = mysqli_query($db,$query);
+            $valor = mysqli_fetch_assoc($resultado);
+           
+            if($valor === NULL){
+              header("Location: http://localhost:3000/login-asegurado.php");
+            }else{
+              header("Location: http://localhost:3000/index.php");
+            } 
+          }
         }
+        include 'includes/templates/header.php';
 
 ?>
 <hr>
 <br>
+
+<?php foreach($errores as $error) : ?>
+    <div class="error">
+      <?php echo $error; ?>
+    </div>
+<?php endforeach; ?>
+
+
+
 
 <section class="inner-title-login">
   <div class="container">
@@ -23,13 +49,13 @@
         <div class="container-login">
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Asegurado</h4>
-          <form class="" action="prueba.php" method="POST" action="/login-asegurado.php">
+          <form method="POST" action="/login-asegurado.php">
 
             <label for="usuario-asegurado">Usuario</label>
-            <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-asegurado" name="asegurado">
+            <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-asegurado" name="correo">
             <label for="password-asegurado">Contraseña</label>
-            <input type="password" placeholder="Ingrese su contraseña" id="password-asegurado" name="contraseña">
-            <input type="submit" value="Iniciar sesión">
+            <input type="password" placeholder="Ingrese su contraseña" id="password-asegurado" name="contrasenia">
+            <input type="submit" value="Iniciar">
             <a href="forgotten-password.php">¿Olvidaste tu contraseña?</a><br>
             <a href="form-aseguramiento.php">Asegúrate a MediSalud</a>
           </form>

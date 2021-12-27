@@ -2152,3 +2152,13 @@ p {
     color: white;
     height: 30px;
 }
+
+.error{
+    background-color: rgb(153, 8, 8);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 10px auto;
+    max-width: 500px;
+    width: 100%;
+}
