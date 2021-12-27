@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: mydb
+-- Host: 127.0.0.1    Database: clinica
 -- ------------------------------------------------------
 -- Server version	8.0.26
 
@@ -28,15 +28,14 @@ CREATE TABLE `administrativo` (
   `Apellido_Administrativo` varchar(45) NOT NULL,
   `Correo_Administrativo` varchar(50) NOT NULL,
   `Area` varchar(50) NOT NULL,
-  `Hospital_Administrativo` varchar(100) NOT NULL,
   `DNI_Administrativo` varchar(45) NOT NULL,
   `Telefono_Administrativo` varchar(45) NOT NULL,
   `Genero_Administrativo` varchar(45) NOT NULL,
-  `Hospital_ID_Hospital` int NOT NULL,
   `Contraseña_Administrativo` varchar(50) NOT NULL,
-  PRIMARY KEY (`ID_Administrativo`,`Hospital_ID_Hospital`),
-  KEY `fk_Administrativo_Hospital1_idx` (`Hospital_ID_Hospital`),
-  CONSTRAINT `fk_Administrativo_Hospital1` FOREIGN KEY (`Hospital_ID_Hospital`) REFERENCES `hospital` (`ID_Hospital`)
+  `Trabajadores_ID_Trabajadores` int NOT NULL,
+  PRIMARY KEY (`ID_Administrativo`,`Trabajadores_ID_Trabajadores`),
+  KEY `fk_administrativo_Trabajadores1_idx` (`Trabajadores_ID_Trabajadores`),
+  CONSTRAINT `fk_administrativo_Trabajadores1` FOREIGN KEY (`Trabajadores_ID_Trabajadores`) REFERENCES `trabajadores` (`ID_Trabajadores`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -68,11 +67,7 @@ CREATE TABLE `asegurados` (
   `Direccion_Asegurado` varchar(45) NOT NULL,
   `Correo_Asegurado` varchar(50) NOT NULL,
   `Contraseña_Asegurado` varchar(50) NOT NULL,
-  `Hospital_Asegurado` varchar(45) NOT NULL,
-  `Hospital_ID_Hospital` int NOT NULL,
-  PRIMARY KEY (`ID_Asegurado`,`Hospital_ID_Hospital`),
-  KEY `fk_Asegurados_Hospital_idx` (`Hospital_ID_Hospital`),
-  CONSTRAINT `fk_Asegurados_Hospital` FOREIGN KEY (`Hospital_ID_Hospital`) REFERENCES `hospital` (`ID_Hospital`)
+  PRIMARY KEY (`ID_Asegurado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -83,6 +78,41 @@ CREATE TABLE `asegurados` (
 LOCK TABLES `asegurados` WRITE;
 /*!40000 ALTER TABLE `asegurados` DISABLE KEYS */;
 /*!40000 ALTER TABLE `asegurados` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `atencion`
+--
+
+DROP TABLE IF EXISTS `atencion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `atencion` (
+  `ID_Atencion` int NOT NULL AUTO_INCREMENT,
+  `ID_Doctor_Atencion` varchar(100) NOT NULL,
+  `Nombre_Doctor_Atencion` varchar(100) NOT NULL,
+  `Especialidad_Atencion` varchar(100) NOT NULL,
+  `ID_Asegurado_Atencion` varchar(100) NOT NULL,
+  `Nombre_Asegurado_Atencion` varchar(100) NOT NULL,
+  `Apellido_Asegurado_Atencion` varchar(100) NOT NULL,
+  `doctor_ID_Doctor` int NOT NULL,
+  `doctor_Trabajadores_ID_Trabajadores` int NOT NULL,
+  `asegurados_ID_Asegurado` int NOT NULL,
+  PRIMARY KEY (`ID_Atencion`,`doctor_ID_Doctor`,`doctor_Trabajadores_ID_Trabajadores`,`asegurados_ID_Asegurado`),
+  KEY `fk_Atencion_doctor1_idx` (`doctor_ID_Doctor`,`doctor_Trabajadores_ID_Trabajadores`),
+  KEY `fk_Atencion_asegurados1_idx` (`asegurados_ID_Asegurado`),
+  CONSTRAINT `fk_Atencion_asegurados1` FOREIGN KEY (`asegurados_ID_Asegurado`) REFERENCES `asegurados` (`ID_Asegurado`),
+  CONSTRAINT `fk_Atencion_doctor1` FOREIGN KEY (`doctor_ID_Doctor`, `doctor_Trabajadores_ID_Trabajadores`) REFERENCES `doctor` (`ID_Doctor`, `Trabajadores_ID_Trabajadores`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `atencion`
+--
+
+LOCK TABLES `atencion` WRITE;
+/*!40000 ALTER TABLE `atencion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `atencion` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -98,15 +128,15 @@ CREATE TABLE `doctor` (
   `Apellido_Doctor` varchar(45) NOT NULL,
   `Correo_Doctor` varchar(50) NOT NULL,
   `Especialidad` varchar(100) NOT NULL,
-  `Hospital_Doctor` varchar(45) NOT NULL,
   `DNI_Doctor` varchar(45) NOT NULL,
   `Telefono_Doctor` varchar(45) NOT NULL,
   `Genero_Doctor` varchar(45) NOT NULL,
-  `Hospital_ID_Hospital` int NOT NULL,
   `Contraseña_Doctor` varchar(50) NOT NULL,
-  PRIMARY KEY (`ID_Doctor`,`Hospital_ID_Hospital`),
-  KEY `fk_Doctor_Hospital1_idx` (`Hospital_ID_Hospital`),
-  CONSTRAINT `fk_Doctor_Hospital1` FOREIGN KEY (`Hospital_ID_Hospital`) REFERENCES `hospital` (`ID_Hospital`)
+  `Doctorcol` varchar(45) NOT NULL,
+  `Trabajadores_ID_Trabajadores` int NOT NULL,
+  PRIMARY KEY (`ID_Doctor`,`Trabajadores_ID_Trabajadores`),
+  KEY `fk_doctor_Trabajadores1_idx` (`Trabajadores_ID_Trabajadores`),
+  CONSTRAINT `fk_doctor_Trabajadores1` FOREIGN KEY (`Trabajadores_ID_Trabajadores`) REFERENCES `trabajadores` (`ID_Trabajadores`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -137,11 +167,10 @@ CREATE TABLE `fallecidos` (
   `Direccion_Fallecidos` varchar(45) NOT NULL,
   `Distrito_Fallecidos` varchar(45) NOT NULL,
   `Hospital_Fallecidos` varchar(45) NOT NULL,
-  `Asegurados_ID_Asegurado` int NOT NULL,
-  `Asegurados_Hospital_ID_Hospital` int NOT NULL,
-  PRIMARY KEY (`ID_Fallecidos`,`Asegurados_ID_Asegurado`,`Asegurados_Hospital_ID_Hospital`),
-  KEY `fk_Fallecidos_Asegurados1_idx` (`Asegurados_ID_Asegurado`,`Asegurados_Hospital_ID_Hospital`),
-  CONSTRAINT `fk_Fallecidos_Asegurados1` FOREIGN KEY (`Asegurados_ID_Asegurado`, `Asegurados_Hospital_ID_Hospital`) REFERENCES `asegurados` (`ID_Asegurado`, `Hospital_ID_Hospital`)
+  `asegurados_ID_Asegurado` int NOT NULL,
+  PRIMARY KEY (`ID_Fallecidos`,`asegurados_ID_Asegurado`),
+  KEY `fk_fallecidos_asegurados1_idx` (`asegurados_ID_Asegurado`),
+  CONSTRAINT `fk_fallecidos_asegurados1` FOREIGN KEY (`asegurados_ID_Asegurado`) REFERENCES `asegurados` (`ID_Asegurado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -155,27 +184,27 @@ LOCK TABLES `fallecidos` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `hospital`
+-- Table structure for table `trabajadores`
 --
 
-DROP TABLE IF EXISTS `hospital`;
+DROP TABLE IF EXISTS `trabajadores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `hospital` (
-  `ID_Hospital` int NOT NULL AUTO_INCREMENT,
-  `Nombre_Hospital` varchar(100) NOT NULL,
-  `Direccion_Hospital` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID_Hospital`)
+CREATE TABLE `trabajadores` (
+  `ID_Trabajadores` int NOT NULL AUTO_INCREMENT,
+  `Nombre_Trabajadores` varchar(100) NOT NULL,
+  `Area_O_Especialidad_Trabajadores` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID_Trabajadores`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `hospital`
+-- Dumping data for table `trabajadores`
 --
 
-LOCK TABLES `hospital` WRITE;
-/*!40000 ALTER TABLE `hospital` DISABLE KEYS */;
-/*!40000 ALTER TABLE `hospital` ENABLE KEYS */;
+LOCK TABLES `trabajadores` WRITE;
+/*!40000 ALTER TABLE `trabajadores` DISABLE KEYS */;
+/*!40000 ALTER TABLE `trabajadores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -187,4 +216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-27  3:41:43
+-- Dump completed on 2021-12-27 10:51:40
