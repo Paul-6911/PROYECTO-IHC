@@ -1,0 +1,24 @@
+var data = '<form class="" action="" method="post" name="formulario-familiar"><fieldset><legend>Datos del Familiar del Titular</legend><div style="margin-right: 20px; padding-bottom: 15px;"><label for="nombres">Nombres</label><input type="text" size="25" style="text-transform:uppercase"></div><div style="margin-right: 24px; padding-bottom: 15px;"><label for="apellidos">Apellidos</label><input type="text" size="30" style="text-transform:uppercase"></div><div style="margin-right: 25px; padding-bottom: 15px;"><label for="dni">DNI</label><input type="text" style:"margin-left: 20px" size="12" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g)" required></div><div><input type="radio" id="masculino" name="genero" value="masculino"><label for="masculino">Masculino</label></div>&ensp;<div><input type="radio" id="femenino" name="genero" value="femenino"><label for="femenino">Femenino</label></div><div style="margin-right: 10px; padding-bottom: 15px;"><label for="relacion-titular">Relación con el titular</label><select name="seleccion-relacion" style="height: 25px;" id="seleccion-relacion"><option value="conyuge">Conyuge</option><option value="concubino">Concubino(a)</option> <option value="hijo-menor">Hijo(a) menor de edad</option><option value="madre-gestante">Madre gestante de hijo(a) extramatrimonial</option><option value="hijo-incapacitado">Hijo(a) mayor incapacitado para trabajar</option></select></div><div style="margin-right: 10px; padding-bottom: 15px;"><label for="direccion">Dirección</label><input type="text" size="35" style="text-transform:uppercase"></div><div style="margin-right: 10px; padding-bottom: 15px;"><label for="distrito">Distrito</label><select name="seleccion-distrito" style="height: 25px" id="seleccion-distrito"><option value="Ancón">Ancón</option><option value="Ate">Ate</option><option value="Barranco">Barranco</option><option value="Breña">Breña</option><option value="Carabayllo">Carabayllo</option><option value="Chaclacayo">Chaclacayo</option><option value="Chorrillos">Chorrillos</option><option value="Cieneguilla">Cieneguilla</option><option value="Comas">Comas</option><option value="El Agustino">El Agustino</option><option value="Independencia">Independencia</option><option value="Jesús María">Jesús María</option><option value="La Molina">La Molina</option><option value="La Victoria">La Victoria</option><option value="Lima">Lima</option><option value="Lince">Lince</option><option value="Los Olivos">Los Olivos</option><option value="Lurigancho-Chosica">Lurigancho-Chosica</option><option value="Lurín">Lurín</option><option value="Magdalena del Mar">Madgalena del Mar</option><option value="Miraflores">Miraflores</option><option value="Pachacamac">Pachacamac</option><option value="Pucusana">Pucusana</option><option value="Pueblo Libre">Pueblo Libre</option><option value="Puente Piedra">Puente Piedra</option><option value="Punta Hermosa">Punta Hermosa</option><option value="Punta Negra">Punta Negra</option><option value="Rímac">Rímac</option><option value="San Bartolo">San Bartolo</option><option value="San Borja">San Borja</option><option value="San Isidro">San Isidro</option><option value="San Juan de Lurigancho">San Juan de Lurigancho</option><option value="San Juan de Miraflores">San Juan de Miraflores</option><option value="San Luis">San Luis</option><option value="San Martín de Porres">San Martín de Porres</option><option value="San Miguel">San Miguel</option><option value="Santa Anita">Santa Anita</option><option value="Santa María del Mar">Santa María del Mar</option><option value="Santa Rosa">Santa Rosa</option><option value="Santiago de Surco">Santiago de Surco</option><option value="Surquillo">Surquillo</option><option value="Villa El Salvador">Villa El Salvador</option><option value="Villa María del Triunfo">Villa María del Triunfo</option></select></div><div style="margin-right: 20px; padding-bottom: 15px;"></div><div style="margin-right: 20px; padding-bottom: 15px;"><label for="fecha-nacimiento">Fecha de Nacimiento</label><input id="datefield" type="date" min="1900-01-01" max="2000-13-13" style="height: 25px"></div></fieldset></form>'
+
+function addNew() {
+  var newContent = document.createElement('div');
+  newContent.innerHTML = data;
+  document.getElementById('target').appendChild(newContent);
+  document.getElementById('remove').style.visibility = "visible";
+}
+
+function removeLastElem() {
+    var num_hijos = document.getElementById('target').childElementCount;
+    if(document.getElementById('target').hasChildNodes()){
+        if(num_hijos!=1&&num_hijos>0){
+            document.getElementById('remove').style.visibility = "visible";
+        }
+        else{
+            document.getElementById('remove').style.visibility = "hidden";
+        }
+        document.getElementById('target').lastChild.remove();
+    }
+    else{
+        document.getElementById('remove').style.visibility = "hidden";
+    }
+}
