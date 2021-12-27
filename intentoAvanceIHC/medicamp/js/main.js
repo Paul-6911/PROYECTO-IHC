@@ -200,7 +200,7 @@ Designed By: rkwebdesigns
 	$(document).ready(function() {
 	    jQueryTabs2(), $(".tabs2 li a").each(function() {
 	        var t = $(this).attr("href"),
-	            i = $(this).html();
+	            i = $(this).php();
 	        $(t + " .tab-title2").prepend("<p><strong>" + i + "</strong></p>")
 	    })
 	}), $(window).resize(function() {
