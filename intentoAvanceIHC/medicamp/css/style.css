@@ -2186,3 +2186,25 @@ p {
 .confirmada h2{
     text-align: center;
 }
+.form-reg{
+    margin-bottom: 10px;
+}
+.ocultar{
+    display: none;
+}
+
+.formulario-registrar{
+    margin-top: 20px;
+}
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario-registrar label{
+    font-weight: bold;  
+}
+.formulario-registrar input{
+    width: 270px; 
+    max-width: 100%; 
+}

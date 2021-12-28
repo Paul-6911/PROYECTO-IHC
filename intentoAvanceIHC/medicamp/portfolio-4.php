@@ -1,3 +1,15 @@
+<?php
+
+    $correo ='';
+    $contrasenia ='';
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+      $correo = $_POST['correo'];
+      $contrasenia = $_POST['contrasenia'];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -150,36 +162,44 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor1.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
-                  <h6>Cardiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
+                    <h6>Cardiología</h6>
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Abad Centella, Julia Elisa<br></div>
+                    <input class="ocultar" type="text" name="doctor" value="Abad Centella, Julia Elisa">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Martes 14pm-16pm">
+                    <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div> class="sedeDoctor"--->
+                    <br>
+                  </div> 
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Abad Centella, Julia Elisa<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div> class="sedeDoctor"--->
-                  <br>
-                </div> 
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>14pm-16pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>8am-10am</h6>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>14pm-16pm</h6>
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
-            <div class="img-descripcionDoctor">
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
                   <h6>Neurología</h6>
+                  <input class="ocultar" type="text" name="doctor" value="ARRUNÁTEGUI PÉREZ, ÓSCAR MANUEL">
+                  <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                  <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                  <input class="ocultar" type="text" name="horario" value="Martes 8am-10:30 am">
                 </div>
                 <div class="datosDoctor">
                   <div class="nombreDoctor">Arrunátegui Pérez, Óscar Manuel<br></div>
@@ -192,899 +212,952 @@
                   <div class="dia-horario">
                     Martes
                   </div><h6>8am-10:30am</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>9am-11am</h6>
+                 
                 </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
+                <input type="submit" class="box-reservarCita" value="Reservar Cita">
               </div>
+            </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Neurología</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Neurología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="BETETA SOLÓRZANO, PEDRO ALFONSO">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 8 am - 10 am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Beteta Solórzano, Pedro Alfonso<br></div>
+                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Beteta Solórzano, Pedro Alfonso<br></div>
-                  <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>8am-10am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>9:30am-11:30am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor32.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Oftalmología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Bustíos Peña, Adriana Nicole">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miercoles 8am-10pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Bustíos Peña, Adriana Nicole<br></div>
+                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Bustíos Peña, Adriana Nicole<br></div>
-                  <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>8am-10am</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>8am-10am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor3.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Neurología</h6>
+              <form action="registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Neurología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Calderón Albites, Verónica">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Martes 14pm-15:30pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Calderón Albites, Verónica<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Calderón Albites, Verónica<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>14pm-15:30pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>14pm-15:30pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>14pm-16:30pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor4.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor4.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Díaz Jáuregui, Aldo Ernesto">
+                      <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                      <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                      <input class="ocultar" type="text" name="horario" value="Lunes 8am-9:30am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Díaz Jáuregui, Aldo Ernesto<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Díaz Jáuregui, Aldo Ernesto<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>8am-9:30am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>8am-9:30am</h6>
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>14pm-16pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor5.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor5.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Cardiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Foster De la Torre, Mirella Leonor">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Viernes 16:30pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Foster De la Torre, Mirella Leonor<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Foster De la Torre, Mirella Leonor<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>08am-10am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>08am-10am</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>16:30pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor6.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Fuentes Urrutia, Leonardo Misael">
+                      <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                      <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                      <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Fuentes Urrutia, Leonardo Misael<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Fuentes Urrutia, Leonardo Misael<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>16pm-18pm</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>8am-10am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor7.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Radiología</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor7.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Radiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Hidalgo Briceño, Anthony">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Sabado 11am-13pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Hidalgo Briceño, Anthony<br></div>
+                    <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Hidalgo Briceño, Anthony<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>16pm-18pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>11am-13pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor8.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Radiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Radiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Hilton Fernández, Paulo Toribio">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 10am-11:30am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Hilton Fernández, Paulo Toribio<br></div>
+                    <!---<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Hilton Fernández, Paulo Toribio<br></div>
-                  <!---<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>10am-11:30am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>10am-11:30am</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>8am-9:30am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor9.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Neurología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Neurología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Ibarra Otoya, Sandra Susana">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Ibarra Otoya, Sandra Susana<br></div>
+                    <!---<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Ibarra Otoya, Sandra Susana<br></div>
-                  <!---<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>16pm-18pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>9am-11am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor10.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Pediatría</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Pediatría</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Ishiguro Jiménez, Lila Naomí">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Ishiguro Jiménez, Lila Naomí<br></div>
+                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Ishiguro Jiménez, Lila Naomí<br></div>
-                  <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>14pm-16pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>14pm-16pm</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>10am-12pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia vilamaria text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor11.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor11.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Cardiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Llanos Teijeiro, Juan Francisco">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 10am-11:30am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Llanos Teijeiro, Juan Francisco<br></div>
+                    <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Llanos Teijeiro, Juan Francisco<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>10am-11:30am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>10am-11:30am</h6>
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>14pm-16pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor12.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Oftalmología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Llanos Teijeiro, Juan Francisco">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 14pm-16pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Losada Reátegui, Santiago Eduardo<br></div>
+                    <!---<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Losada Reátegui, Santiago Eduardo<br></div>
-                  <!---<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>14pm-16pm</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>14pm-16pm</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>16pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor13.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Luján Abregú, Pamela Roxana">
+                      <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                      <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                      <input class="ocultar" type="text" name="horario" value="Martes 09:30am-11am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Luján Abregú, Pamela Roxana<br></div>
+                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Luján Abregú, Pamela Roxana<br></div>
-                  <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>09:30am-11am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>09:30am-11am</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>14:00pm-16pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
-            <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor14.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Pediatría</h6>
+            <form action="/registrarCita.php" method="POST">
+              <div class="img-descripcionDoctor">
+                <a href="registrarCita.php"><img src="images/portfolio/doctor14.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Pediatría</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Merino Espejo, Gael Omar">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Martes 15:30pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Merino Espejo, Gael Omar<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Merino Espejo, Gael Omar<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>15:30pm-18pm</h6>
+                  
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>15:30pm-18pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>8am-9:30am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+               </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor15.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Radiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Radiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Montalvo Dos Santos, Carmen Rosa">
+                      <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                      <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                      <input class="ocultar" type="text" name="horario" value="Lunes 11:30am-13:30am<">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Montalvo Dos Santos, Carmen Rosa<br></div>
+                    <!---<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Montalvo Dos Santos, Carmen Rosa<br></div>
-                  <!---<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>11:30am-13:30am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>11:30am-13:30am</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>16pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor16.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Oftalmología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Núñez Hinostroza, Néstor">
+                        <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                        <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                        <input class="ocultar" type="text" name="horario" value="Martes 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Núñez Hinostroza, Néstor<br></div>
+                    <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>  
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Núñez Hinostroza, Néstor<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
-                </div>  
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>14pm-16pm</h6>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>8am-10am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor17.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Oftalmología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Olórtegui Li, Victoria de los Ángeles">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Olórtegui Li, Victoria de los Ángeles<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>---->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Olórtegui Li, Victoria de los Ángeles<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>---->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>16pm-18pm</h6>
+                  
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>9:30am-11am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor18.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Ortega Espinola, Andrés Gastón">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Jueves 14pm-16pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Ortega Espinola, Andrés Gastón<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Ortega Espinola, Andrés Gastón<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Jueves
+                    </div><h6>14pm-16pm</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>14pm-16pm</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>9am-11am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor19.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Cardiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Palao Torregrosa, Juan Cristóbal">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Palao Torregrosa, Juan Cristóbal<br></div>
+                    <!---<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Palao Torregrosa, Juan Cristóbal<br></div>
-                  <!---<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>16pm-18pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>16pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor20.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Pediatría</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Pediatría</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Puelles Montana, Ashley Susana">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 14pm-15:30pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Puelles Montana, Ashley Susana<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Puelles Montana, Ashley Susana<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>14pm-15:30pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>14pm-15:30pm</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>15:30pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
-          <!---
-          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia sanborja text-center">
-            <div class="img-descripcionDoctor">
-              <a href="doctores/reateguimatta-diegoalonso.php"><img src="images/portfolio/doctor21.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
-                </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Reátegui Matta, Diego Alonso<br></div>
-                    <div class="sedeDoctor">Sede San Borja</div>
-                  <br>
-                </div>
-              </div>
-            </div>
-            <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior
-          </div>
-          --->
+         
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor22.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Pediatría</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Pediatría</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Reyes Quiñones, Estrella Jesusa">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Reyes Quiñones, Estrella Jesusa<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Reyes Quiñones, Estrella Jesusa<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>8am-10am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>16pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor23.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Radiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Radiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Rueda De Molina, José Ignacio">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Rueda De Molina, José Ignacio<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>---->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Rueda De Molina, José Ignacio<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>---->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>16pm-18pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>14pm-15:30pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor24.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Oftalmología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Salvatierra Yamamoto, Saúl Arturo">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Lunes 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Salvatierra Yamamoto, Saúl Arturo<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Salvatierra Yamamoto, Saúl Arturo<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Lunes
+                    </div><h6>8am-10am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Lunes
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>10am-12pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
+
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor25.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Neurología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Neurología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Taboada Sevilla, Kiara Paola">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Jueves 8am-9:30am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Taboada Sevilla, Kiara Paola<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Taboada Sevilla, Kiara Paola<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Jueves
+                    </div><h6>8am-9:30am</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>8am-9:30am</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>11am-13pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor26.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Cardiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Torre Chumpitaz, Melva">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Torre Chumpitaz, Melva<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Torre Chumpitaz, Melva<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>8am-10am</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>8am-10am</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor27.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Torre Morales, Braulio Héctor">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Torre Morales, Braulio Héctor<br></div>
+                    <!--<div class="sedeDoctor">Sede San Borja</div>---->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Torre Morales, Braulio Héctor<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>---->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>8am-10am</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>14pm-16pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor28.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Neurología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Neurología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Torroja Villareal, Luis Ángel">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 8am-10am">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Torroja Villareal, Luis Ángel<br></div>
+                    <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Torroja Villareal, Luis Ángel<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>8am-10am</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>8am-10am</h6>
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>14pm-16:30pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+              </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor29.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Radiología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Radiología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Wilhelm Eguren, Marcos Lorenzo">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Martes 10:30am-12:30pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Wilhelm Eguren, Marcos Lorenzo<br></div>
+                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Wilhelm Eguren, Marcos Lorenzo<br></div>
-                  <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Martes
+                    </div><h6>10:30am-12:30pm</h6>
+                   
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>10:30am-12:30pm</h6>
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>11am-11pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
-          <!---
-          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia villamaria text-center">
-            <div class="img-descripcionDoctor">
-              <a href="doctores/ybarsandoval-cynthiaregina.php"> <img src="images/portfolio/doctor30.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Cardiología</h6>
-                </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Ybar Sandoval, Cynthia Regina<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div>
-                  <br>
-                </div>
-              </div>
-            </div>
-            <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior
-          </div>
-          --->
+       
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor31.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Dermatología</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Dermatología</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Yesán Ortega, Narciso">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Miércoles 11:30am-13pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Yesán Ortega, Narciso<br></div>
+                    <!---<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Yesán Ortega, Narciso<br></div>
-                  <!---<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Miércoles
+                    </div><h6>11:30am-13pm</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Miércoles
-                  </div><h6>11:30am-1pm</h6>
-                  <div class="dia-horario">
-                    Viernes
-                  </div><h6>16pm-18pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor34.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Pediatría</h6>
+              <form action="/registrarCita.php" method="POST">
+                <div class="descripcionDoctor">
+                  <div class="especialidad-descripcionDoctor">
+                    <h6>Pediatría</h6>
+                    <input class="ocultar" type="text" name="doctor" value="Zapata Alarcón, Gabriela Estefania">
+                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                    <input class="ocultar" type="text" name="horario" value="Jueves 16pm-18pm">
+                  </div>
+                  <div class="datosDoctor">
+                    <div class="nombreDoctor">Zapata Alarcón, Gabriela Estefania<br></div>
+                    <!--<div class="sedeDoctor">Sede Independencia</div>--->
+                    <br>
+                  </div>
                 </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Zapata Alarcón, Gabriela Estefania<br></div>
-                  <!--<div class="sedeDoctor">Sede Independencia</div>--->
-                  <br>
+                <div class="descripcion_horario">
+                  <div class="box-horario">
+                    <div class="dia-horario">
+                      Jueves
+                    </div><h6>16pm-18pm</h6>
+                    
+                  </div>
+                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
                 </div>
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Jueves
-                  </div><h6>16pm-18pm</h6>
-                  <div class="dia-horario">
-                    Sábado
-                  </div><h6>14pm-16pm</h6>
-                </div>
-                <div class="box-reservarCita"><h6>Reservar Cita</h6></div>
-              </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
-          <!--
-          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
-            <div class="img-descripcionDoctor">
-              <a href="doctores/zearivadeneira-javieresteban.php"> <img src="images/portfolio/doctor35.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor">
-                  <h6>Oftalmología</h6>
-                </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Zea Rivadeneira, Javier Esteban<br></div>
-                  <!--<div class="sedeDoctor">Sede San Borja</div>
-                  <br>
-                </div>
-              </div>
-            </div>
-            <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior
-          </div>
-          --->
+         
         </div>
       </div>
     </div>
   </div>
 </section>
-<!---
-<section id="section10" class="section-10-background">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 col-lg-9">
-        <div class="section-10-box-text-cont">
-          <h3>Medicamp  HTML Template. Buy this theme.</h3>
 
-        </div>
-      </div>
-      <div class="col-md-3 col-lg-3">
-        <div class="section-10-btn-cont"><a href="#" class="btn btn-secondary wow fadeInUp">Get Started!</a></div>
-      </div>
-    </div>
-  </div>
-</section>
---->
 <?php include 'includes/templates/footer.php'?>

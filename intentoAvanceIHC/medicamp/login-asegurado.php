@@ -49,7 +49,7 @@
         <div class="container-login">
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Asegurado</h4>
-          <form method="POST" action="/login-asegurado.php">
+          <form method="POST" action="/portfolio-4.php">
 
             <label for="usuario-asegurado">Usuario</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-asegurado" name="correo">

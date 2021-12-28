@@ -1,3 +1,15 @@
+<?php
+    require 'includes/config/database.php';
+    $DB = conectarDB();
+
+    $query = "SELECT ID_Doctor FROM doctor WHERE Apellido_Doctor = $_POST[doctor]";
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -84,7 +96,21 @@
   </div>
 </section>
 
-<div class="formulario">
+<div class="formulario-registrar">
+        <form action="" class="form-reg">
+          <fieldset>
+            <legend>Validar los datos Registrados</legend>
+            <div class="campos">
+              <label for="Correo">Correo</label>
+              <input type="text" value="<?php echo $_POST['email'] ?>">
+              <label for="Doctor">Doctor</label>
+              <input type="text" value="<?php echo $_POST['doctor'] ?>">
+              <label for="hora">Horario</label>
+              <input type="text" value="<?php echo $_POST['horario'] ?>">
+            </div>
+          </fieldset>
+        </form>
+
         <a class="confirmar" href="citaConfirmada.php">Confirmar cita</a>
         <a class="confirmar" href="portfolio-4.php">Volver</a>
 </div>
