@@ -132,7 +132,6 @@ CREATE TABLE `doctor` (
   `Telefono_Doctor` varchar(45) NOT NULL,
   `Genero_Doctor` varchar(45) NOT NULL,
   `Contraseña_Doctor` varchar(50) NOT NULL,
-  `Doctorcol` varchar(45) NOT NULL,
   `Trabajadores_ID_Trabajadores` int NOT NULL,
   PRIMARY KEY (`ID_Doctor`,`Trabajadores_ID_Trabajadores`),
   KEY `fk_doctor_Trabajadores1_idx` (`Trabajadores_ID_Trabajadores`),
