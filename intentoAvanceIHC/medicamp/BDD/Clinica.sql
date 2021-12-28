@@ -57,16 +57,16 @@ DROP TABLE IF EXISTS `asegurados`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `asegurados` (
   `ID_Asegurado` int NOT NULL AUTO_INCREMENT,
-  `Nombre_Asegurado` varchar(45) NOT NULL,
-  `Apellido_Asegurado` varchar(45) NOT NULL,
-  `DNI_Asegurado` varchar(45) NOT NULL,
-  `Telefono_Asegurado` varchar(45) NOT NULL,
-  `Genero_Asegurado` varchar(45) NOT NULL,
-  `Fecha_de_Nacimineto_Asegurado` date NOT NULL,
-  `Distrito_Asegurado` varchar(45) NOT NULL,
-  `Direccion_Asegurado` varchar(45) NOT NULL,
-  `Correo_Asegurado` varchar(50) NOT NULL,
-  `Contraseña_Asegurado` varchar(50) NOT NULL,
+  `Nombre_Asegurado` varchar(45) ,
+  `Apellido_Asegurado` varchar(45) ,
+  `DNI_Asegurado` varchar(45) ,
+  `Telefono_Asegurado` varchar(45) ,
+  `Genero_Asegurado` varchar(45) ,
+  `Fecha_de_Nacimineto_Asegurado` date ,
+  `Distrito_Asegurado` varchar(45)L,
+  `Direccion_Asegurado` varchar(45) ,
+  `Correo_Asegurado` varchar(50)  ,
+  `Contraseña_Asegurado` varchar(50) ,
   PRIMARY KEY (`ID_Asegurado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -89,17 +89,15 @@ DROP TABLE IF EXISTS `atencion`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `atencion` (
   `ID_Atencion` int NOT NULL AUTO_INCREMENT,
-  `ID_Doctor_Atencion` varchar(100) NOT NULL,
-  `Nombre_Doctor_Atencion` varchar(100) NOT NULL,
-  `Especialidad_Atencion` varchar(100) NOT NULL,
-  `ID_Asegurado_Atencion` varchar(100) NOT NULL,
-  `Nombre_Asegurado_Atencion` varchar(100) NOT NULL,
-  `Apellido_Asegurado_Atencion` varchar(100) NOT NULL,
+  `ID_Doctor_Atencion` varchar(100) ,
+  `Nombre_Doctor_Atencion` varchar(100) ,
+  `Especialidad_Atencion` varchar(100) ,
+  `ID_Asegurado_Atencion` varchar(100) ,
+  `Nombre_Asegurado_Atencion` varchar(100) ,
+  `Apellido_Asegurado_Atencion` varchar(100) ,
   PRIMARY KEY (`ID_Atencion`,`doctor_ID_Doctor`,`doctor_Trabajadores_ID_Trabajadores`,`asegurados_ID_Asegurado`),
   KEY `fk_Atencion_doctor1_idx` (`doctor_ID_Doctor`,`doctor_Trabajadores_ID_Trabajadores`),
   KEY `fk_Atencion_asegurados1_idx` (`asegurados_ID_Asegurado`),
-  CONSTRAINT `fk_Atencion_asegurados1` FOREIGN KEY (`asegurados_ID_Asegurado`) REFERENCES `asegurados` (`ID_Asegurado`),
-  CONSTRAINT `fk_Atencion_doctor1` FOREIGN KEY (`doctor_ID_Doctor`, `doctor_Trabajadores_ID_Trabajadores`) REFERENCES `doctor` (`ID_Doctor`, `Trabajadores_ID_Trabajadores`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
