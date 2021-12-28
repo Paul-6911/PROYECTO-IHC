@@ -103,7 +103,6 @@
     </div>
   </div>
 </section> 
---->
 <br>
 
 <?php foreach ($errores as $error): ?>
@@ -123,7 +122,7 @@
             <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
             <h4>Formulario Único de Seguro de MediSalud</h4>
               <div id="form-asegurado">
-                <form method="POST" action="/form-aseguramiento.php">
+                <form method="POST" action="form-aseguramiento.php">
                   <fieldset> <!--- FORMULARIO DEL TITULAR (ASEGURADO)-->
                     <legend>Datos del Titular</legend>
                       <div style="margin-right: 18px; padding-bottom: 15px;">
