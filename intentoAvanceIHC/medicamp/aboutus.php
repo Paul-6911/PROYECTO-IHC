@@ -23,7 +23,7 @@
       <div class="col-md-8 col-lg-8 wow fadeInUp">
         <div class="textcont">
           <h3>Nuestro Compromiso</h3>
-          <p>Nuestro compromiso es proveer al pueblo puertorriqueño, y en especial a las comunidades que nos circundan, de una medicina de un grado óptimo, servicios de salud en forma comprensiva que llene las necesidades de salud del paciente y sus familiares en los aspectos terapéuticos, de rehabilitación y de sostén basados en las necesidades físicas, mentales, espirituales y sociales del paciente. Más allá de eso, somos una familia, y por eso nos compete profundamente el bienestar de todos dentro y fuera de nuestra institución.</p>
+          <p>Nuestro compromiso es proveer al asegurado, y en especial a las comunidades que nos circundan, de una medicina de un grado óptimo, servicios de salud en forma comprensiva que llene las necesidades de salud del paciente y sus familiares en los aspectos terapéuticos, de rehabilitación y de sostén basados en las necesidades físicas, mentales, espirituales y sociales del paciente. Más allá de eso, somos una familia, y por eso nos compete profundamente el bienestar de todos dentro y fuera de nuestra institución.</p>
           <h4>Nuestra Historia</h4>
           <p>Nos complace invitar a todos nuestros pacientes, empleados y aliados a participar de una etapa de reinvención de nuestra institutución luego de más de tres décadas de excelencia. Desde la apertura del hospital, nos hemos distinguido por un profundo arraigo a la comunidad ponceña.
           Hoy, con más servicios, personal y tecnología que nunca, el Hospital y el Grupo San Cristóbal se enorgullece de una larga trayectoria sirviendo a nuestro pueblo, que solo está comenzando.</p>

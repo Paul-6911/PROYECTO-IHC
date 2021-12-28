@@ -70,24 +70,8 @@
           <li><a href="index.php" style="color:#00aef0">Inicio</a></li>
           <li class="active"><a href="aboutus.php" style="color:#00aef0"><b>Sobre Nosotros</b></a></li>
           <li><a href="services.php" style="color:#00aef0">Servicios </a></li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#00aef0">Doctores <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="portfolio-4.php">Por Especialidad</a></li>
-            </ul>
-          </li>
-          <!---
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white">Blog <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="blog-listing.php">Publicaciones</a></li>
-              <li><a href="blog-details.php">Comentarios</a></li>
-            </ul>
-          </li>
-          --->
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#00aef0">Páginas <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="faq.php">Preguntas Frecuentes</a></li>
-            </ul>
-          </li>
+          <li><a href="portfolio-4.php" style="color:#00aef0">Doctores</a></li>
+          <li><a href="faq.php" style="color:#00aef0">Preguntas Frecuentes</a></li>
           <li><a href="contact.php" style="color:#00aef0">Contáctenos</a></li>
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#00aef0"><i class="fas fa-user"></i> Iniciar Sesión <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
