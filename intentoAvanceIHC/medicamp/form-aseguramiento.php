@@ -68,7 +68,6 @@
                //INSERTAR
                $query = "INSERT INTO asegurados (Nombre_Asegurado,Apellido_Asegurado,DNI_Asegurado,Telefono_Asegurado,Genero_Asegurado,Fecha_Nacimiento,Distrito_Asegurado,Direccion_Asegurado,Correo_Asegurado,Contrasenia_Asegurado) VALUES ('$nombres','$apellidos','$dni','$telefono','$genero','$fechaNacimiento','$distrito','$direccion','$correo','$contraseña')";
 
-               echo $query;
                $resultado = mysqli_query($db,$query);
 
                if($resultado){

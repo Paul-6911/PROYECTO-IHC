@@ -1,20 +1,83 @@
-<?php  include 'includes/templates/header.php' ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Medicamp Responsive Bootstrap Template">
+<meta name="keywords" content="Pixel">
+<meta name="author" content="rkwebdesigns">
+<script src="https://kit.fontawesome.com/025c8798b9.js" crossorigin="anonymous"></script>
+<!-- Site Title   -->
+<title>Sistema de Atención Hospitalaria - Sobre Nosotros</title>
+<!-- Fav Icons   -->
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<!-- Fonts Awesome -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!-- animate Effect -->
+<link href="css/animate.css" rel="stylesheet">
+<!-- Main CSS -->
+<link href="css/style.css" rel="stylesheet">
+<!-- Responsive CSS -->
+<link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="head">
+  
+  <div class="top-header">
+    <div class="container">
+      <div class="row ">
+        <ul class="contact-detail2 col-md-6 pull-left">
+           <li> <a href="#" target="_blank"><i class="fa fa-mobile" style="color: #333"></i>459 123 721</a></li>
+           <li> <a href="#" target="_blank"><i class="fa fa-envelope-o" style="color: #333"></i>mediSalud@gmail.com</a></li>
+        </ul>
+        <div class="social-links col-md-6 pull-right">
+          <ul class="social-icons pull-right">
+            <li> <a href="http://facebook.com" target="_blank"><i class="fa fa-facebook" style="color: blue;"></i></a> </li>
+            <li> <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter" style="color: skyblue;"></i></a> </li>
+            <!---
+            <li> <a href="http://pinterest.com" target="_blank"><i class="fa fa-pinterest" style="color: red;"></i></a> </li>
+            <li> <a href="http://dribble.com/" target="_blank"><i class="fa fa-skype"></i></a> </li>
+            <li> <a href="http://pinterest.com" target="_blank"><i class="fa fa-dribbble"></i></a> </li>
+            --->
+           </ul>
+        </div>
+      </div>
+     </div>
+    </div>
+    
+  <nav class="navbar navbar-default navbar-menu">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="index.php">
+          <div class="logo-text"><span><samp>M</samp>Medi</span>Salud</div>
+          <!-- <img src="images/logo.png" alt="logo"> -->
+        </a> 
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login-asegurado.php" style="color:#00aef0">Salir</a></li>
+    
+         
+        </ul>
+      </div>
 
 <section id="inner-title" class="inner-title">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-lg-6">
         <h2>Staff Médico</h2>
-      </div>
-      <div class="col-md-6 col-lg-6">
-        <div class="breadcrumbs">
-          <ul>
-            <li>Página Actual:</li>
-            <li><a href="index.php">Inicio</a></li>
-            <li><a href="#">Recursos</a></li>
-            <li><a href="portfolio-4.php">4 Colums</a></li>
-          </ul>
-        </div>
       </div>
       
     </div>
@@ -86,7 +149,7 @@
         <div class="portfolioContainer" style="margin-bottom: 20px;">
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor1.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor1.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
                   <h6>Cardiología</h6>
@@ -113,7 +176,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
                   <h6>Neurología</h6>
@@ -140,7 +203,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Neurología</h6>
@@ -167,7 +230,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor32.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor32.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Oftalmología</h6>
@@ -194,7 +257,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor3.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor3.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Neurología</h6>
@@ -221,7 +284,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor4.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor4.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -248,7 +311,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor5.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor5.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Cardiología</h6>
@@ -275,7 +338,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor6.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor6.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -302,7 +365,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor7.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor7.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Radiología</h6>
@@ -329,7 +392,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor8.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor8.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Radiología</h6>
@@ -356,7 +419,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor9.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor9.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Neurología</h6>
@@ -383,7 +446,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor10.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor10.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Pediatría</h6>
@@ -410,7 +473,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia vilamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor11.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor11.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Cardiología</h6>
@@ -437,7 +500,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor12.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor12.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Oftalmología</h6>
@@ -464,7 +527,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor13.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor13.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -491,7 +554,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor14.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor14.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Pediatría</h6>
@@ -518,7 +581,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor15.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor15.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Radiología</h6>
@@ -545,7 +608,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor16.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor16.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Oftalmología</h6>
@@ -572,7 +635,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor17.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor17.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Oftalmología</h6>
@@ -599,7 +662,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor18.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor18.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -626,7 +689,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor19.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor19.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Cardiología</h6>
@@ -653,7 +716,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor20.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor20.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Pediatría</h6>
@@ -698,7 +761,7 @@
           --->
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor22.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor22.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Pediatría</h6>
@@ -725,7 +788,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor23.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor23.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Radiología</h6>
@@ -752,7 +815,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor24.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor24.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Oftalmología</h6>
@@ -779,7 +842,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor25.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor25.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Neurología</h6>
@@ -806,7 +869,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"><img src="images/portfolio/doctor26.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"><img src="images/portfolio/doctor26.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Cardiología</h6>
@@ -833,7 +896,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"> <img src="images/portfolio/doctor27.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"> <img src="images/portfolio/doctor27.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -860,7 +923,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"> <img src="images/portfolio/doctor28.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"> <img src="images/portfolio/doctor28.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Neurología</h6>
@@ -887,7 +950,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"> <img src="images/portfolio/doctor29.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"> <img src="images/portfolio/doctor29.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Radiología</h6>
@@ -932,7 +995,7 @@
           --->
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"> <img src="images/portfolio/doctor31.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"> <img src="images/portfolio/doctor31.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Dermatología</h6>
@@ -959,7 +1022,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
-              <a href="#"> <img src="images/portfolio/doctor34.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+              <a href="registrarCita.php"> <img src="images/portfolio/doctor34.jpg" alt="image" class="imagenDoctor img-responsive"></a>
               <div class="descripcionDoctor">
                 <div class="especialidad-descripcionDoctor">
                   <h6>Pediatría</h6>

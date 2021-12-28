@@ -2154,11 +2154,35 @@ p {
 }
 
 .error{
-    background-color: rgb(153, 8, 8);
+    background-color: #f34f4f;
     color: white;
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto 10px auto;
     max-width: 500px;
     width: 100%;
+}
+
+.formulario{
+    margin-top:20px;
+}
+
+.confirmar{
+    display: block;
+    background-color: rgb(14, 157, 214);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+.confirmada{
+    margin: 20px auto;
+}
+
+.confirmada h2{
+    text-align: center;
 }

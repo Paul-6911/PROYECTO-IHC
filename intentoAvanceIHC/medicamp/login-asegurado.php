@@ -23,7 +23,7 @@
             if($valor === NULL){
               header("Location: http://localhost:3000/login-asegurado.php");
             }else{
-              header("Location: http://localhost:3000/index.php");
+              header("Location: http://localhost:3000/portfolio-4.php");
             } 
           }
         }

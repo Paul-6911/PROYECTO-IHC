@@ -67,22 +67,28 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.php" style="color:#00aef0">Inicio</a></li>
-          <li class="active"><a href="aboutus.php" style="color:#00aef0"><b>Sobre Nosotros</b></a></li>
-          <li><a href="services.php" style="color:#00aef0">Servicios </a></li>
-          <!--<li><a href="portfolio-4.php" style="color:#00aef0">Doctores</a></li>-->
-          <li><a href="faq.php" style="color:#00aef0">Preguntas Frecuentes</a></li>
-          <li><a href="contact.php" style="color:#00aef0">Contáctenos</a></li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#00aef0"><i class="fas fa-user"></i> Iniciar Sesión <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="login-asegurado.php">Asegurado</a></li>
-              <li><a href="login-administrativo.php">Administrativo</a></li>
-              <li><a href="login-doctor.php">Doctor</a></li>
-            </ul>
-          </li>
+          <li><a href="login-asegurado.php" style="color:#00aef0">Salir</a></li>
+    
+         
         </ul>
       </div>
-      <!--/.nav-collapse --> 
+
+<section id="inner-title" class="inner-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <h2>Staff Médico</h2>
+      </div>
+      
     </div>
-  </nav>
-</header>
+  </div>
+</section>
+
+<div class="confirmada">
+        <h2>Su cita se confirmo satisfactoriamente</h2>
+        <a class="confirmar" href="portfolio-4.php">Volver</a>
+</div>
+
+
+
+<?php include 'includes/templates/footer.php'?>
