@@ -1,9 +1,14 @@
 <?php  
         require 'includes/config/database.php';
         $db = conectarDB();
-        $errores = [];
+        $errores = [''];
         $valor = '';
+        echo "<pre>";
+        var_dump($_POST);
+        echo "</pre>";
 
+        $correo = 'x23%#a';
+        $contrasenia = 'm32zw%$';
 
         //validacion
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -18,7 +23,7 @@
           }
 
           if(empty($errores)){
-            $query = "SELECT Correo_Asegurado,Contrasenia_Asegurado FROM asegurados WHERE Correo_Asegurado = '$correo'";
+            $query = "SELECT Correo_Asegurado,Contrasenia_Asegurado FROM asegurados WHERE Correo_Asegurado = '$correo' AND Contrasenia_Asegurado = '$contrasenia'";
             $resultado = mysqli_query($db,$query);
             $valor = mysqli_fetch_assoc($resultado);
            
@@ -29,6 +34,43 @@
             }
           }
         }
+      /*
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+          if(isset($_POST["correo"], $_POST["contrasenia"])){     
+      
+              $correo = $_POST["correo"]; 
+              $contrasenia = $_POST["contrasenia"]; 
+      
+              $query = "SELECT Correo_Asegurado,Contrasenia_Asegurado FROM asegurados WHERE Correo_Asegurado = '$correo' AND Contrasenia_Asegurado = '$contrasenia'";
+              $result1 = mysqli_query($db,$query);
+      
+              if(mysqli_num_rows($result1) > 0 )
+              { 
+                if(!$correo){
+                  $errores[] = "Debe de completar el nombre de usuario";
+                }
+                if(!$contrasenia){
+                  $errores[] = "Debe de completar su contraseña";
+                }
+
+                if(empty($errores)){
+                  $valor = mysqli_fetch_assoc($result1);
+                 
+                  if($valor === NULL){
+                    header("Location: http://localhost:3000/login-asegurado.php");
+                  }else{
+                    header("Location: http://localhost:3000/portfolio-4.php");
+                  }
+                }
+              }
+              else
+              {
+                  echo 'The username or password are incorrect!';
+              }
+          }
+        }
+      */
+       
         include 'includes/templates/header.php';
 
 ?>
@@ -53,7 +95,7 @@
           <h4>Iniciar Sesión - Asegurado</h4>
 
           <form method="POST" action= " <?php echo empty($errores) === TRUE ?  'login-asegurado.php': 'portfolio-4.php';?> " >
-            <label for="usuario-asegurado">Correo</label>
+            <label for="usuario-asegurado">Usuario</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-asegurado" name="correo">
             <label for="password-asegurado">Contraseña</label>
             <input type="password" placeholder="Ingrese su contraseña" id="password-asegurado" name="contrasenia">

@@ -2208,15 +2208,3 @@ p {
     width: 270px; 
     max-width: 100%; 
 }
-
-.row_footer{
-
-}
-
-@media (min-width: 400px){
-    .row_footer{
-        display: flex;
-        flex-direction: row;
-        justify-content:space-between;
-    }
-}

@@ -49,7 +49,7 @@ include 'includes/templates/header.php' ?>
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Administrativo</h4>
           <form  method="post" action="/login-administrativo.php">
-            <label for="usuario-administrativo">Correo</label>
+            <label for="usuario-administrativo">Usuario</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-administrativo" name="correo">
             <label for="password-administrativo">Contraseña</label>
             <input type="password" placeholder="Ingrese su contraseña" id="password-administrativo" name="contrasenia">

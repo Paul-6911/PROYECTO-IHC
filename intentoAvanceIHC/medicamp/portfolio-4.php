@@ -7,9 +7,9 @@
       $contrasenia = $_POST['contrasenia'];
     }
 
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+   // echo "<pre>";
+   // var_dump($_POST);
+    // echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -164,7 +164,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor1.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
                     <h6>Cardiología</h6>
@@ -194,7 +194,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
           <div class="img-descripcionDoctor">
             <a href="registrarCita.php"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
                   <div class="descripcionDoctor">
                     <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
                       <h6>Cardiología</h6>
@@ -222,7 +222,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                   <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                   <div class="descripcionDoctor">
@@ -255,7 +255,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor32.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
@@ -315,7 +315,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                 <a href="registrarCita.php"><img src="images/portfolio/doctor4.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                 <div class="descripcionDoctor">
@@ -346,7 +346,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                 <a href="registrarCita.php"><img src="images/portfolio/doctor5.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                 <div class="descripcionDoctor">
@@ -379,7 +379,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor6.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
@@ -408,7 +408,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                 <a href="registrarCita.php"><img src="images/portfolio/doctor7.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                 <div class="descripcionDoctor">
@@ -441,7 +441,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor8.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
@@ -472,7 +472,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor9.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Neurología</h6>
@@ -503,7 +503,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor10.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
@@ -532,7 +532,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia vilamaria text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                 <a href="registrarCita.php"><img src="images/portfolio/doctor11.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                 <div class="descripcionDoctor">
@@ -565,7 +565,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor12.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
@@ -596,7 +596,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor13.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
@@ -625,7 +625,7 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
-            <form action="/registrarCita.php" method="POST">
+            <form action="registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
                 <a href="registrarCita.php"><img src="images/portfolio/doctor14.jpg" alt="image" class="imagenDoctor img-responsive"></a>
                 <div class="descripcionDoctor">
@@ -658,7 +658,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor15.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
@@ -689,7 +689,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor16.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
@@ -720,7 +720,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor17.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
@@ -751,7 +751,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor18.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
@@ -782,7 +782,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor19.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Cardiología</h6>
@@ -813,7 +813,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor20.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
@@ -845,7 +845,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor22.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
@@ -876,7 +876,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor23.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
@@ -907,7 +907,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 oftalmologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor24.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
@@ -939,7 +939,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor25.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Neurología</h6>
@@ -970,7 +970,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 cardiologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"><img src="images/portfolio/doctor26.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Cardiología</h6>
@@ -1001,7 +1001,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia sanborja text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor27.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
@@ -1032,7 +1032,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor28.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Neurología</h6>
@@ -1063,7 +1063,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 radiologia villamaria text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor29.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
@@ -1095,7 +1095,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 dermatologia independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor31.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
@@ -1126,7 +1126,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pediatria independencia text-center">
             <div class="img-descripcionDoctor">
               <a href="registrarCita.php"> <img src="images/portfolio/doctor34.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-              <form action="/registrarCita.php" method="POST">
+              <form action="registrarCita.php" method="POST">
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>

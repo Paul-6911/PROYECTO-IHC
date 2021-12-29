@@ -59,8 +59,8 @@
     <div class="row my-team">
       <div class="col-md-12">
         <header class="title-head">
-          <h2>Equipo de Trabajo</h2>
-          <p>Nuestros doctores están capacitados para brindarle una atención de calidad.</p>
+          <h2>Equipo Fundador de MediSalud</h2>
+          <p>Gracias a la contribución de estos médicos disponemos el Servicio de Atención Hospitalaria - MediSalud.</p>
           <div class="line-heading">
             <span class="line-left"></span>
             <span class="line-middle">+</span>
@@ -139,84 +139,29 @@
     </div>
   </div>
 </section>
-<!---
-<section id="section14" class="section-margine">
+<section id="section8" class="mytestimonial">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-12">
-        <header class="title-head">
-          <h2>Recent Post</h2>
-          <p>Using many font styles canslow down your webpage, so only select the font styles that you</p>
-          <div class="line-heading">
-            <span class="line-left"></span>
-            <span class="line-middle">+</span>
-            <span class="line-right"></span>
+      <div data-ride="carousel" class="carousel slide" id="testimonial">
+        <ol class="carousel-indicators">
+          <li data-target="#testimonial" data-slide-to="0" class="active"><img alt="Testimonial" class="img-responsive" src="images/people/f1.png">
+          </li>
+          <li data-target="#testimonial" data-slide-to="1"><img alt="Testimonial" class="img-responsive" src="images/people/f2.png">
+          </li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item text-center quotes-detail active left">
+            <p class="client-quote" style="font-size: 150%;"><i class="fa fa-quote-left"></i>La salud no lo es todo, pero sin ella todo lo demás es nada.<i class="fa fa-quote-right "></i></p>
+            <h5 class="client-name">Arthur Schopenhauer</h5>             
           </div>
-        </header>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-lg-4">
-        <div class="section-14-box wow fadeInUp">
-          <img src="images/blog/blog-1.jpg" class="img-responsive" alt="Blog image 1">
-          <h3><a href="#">New Cancer Treatment</a></h3>
-          <div class="row">
-            <div class="col-md-12 col-lg-12">
-              <div class="comments">
-                <a class="btn btn-primary btn-sm">July, 30, 30</a>
-                <a href="#" class="btn btn-primary btn-sm">rkwebdes</a>
-              </div>
-            </div>
+          <div class="item text-center quotes-detail next left">
+            <p class="client-quote" style="font-size: 150%"><i class="fa fa-quote-left "></i>Que tu medicina sea tu alimento y el alimento tu medicina.<i class="fa fa-quote-right "></i></p>
+            <h5 class="client-name">Hipócrates</h5>
           </div>
-          <p>Laoreet eleifend condimentum urna odio inceptos bibendum curae imperdiet laoreet nunc tellus, class ultricies vivamus primis.</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-4">
-        <div class="section-14-box wow fadeInUp" data-wow-delay=".2s">
-          <h3><a href="#">Surgery Advices</a></h3>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="comments">
-                <a class="btn btn-primary btn-sm">July, 30, 30</a>
-                <a href="#" class="btn btn-primary btn-sm">rkwebdes</a>
-              </div>
-            </div>
-          </div>
-          <p>Laoreet eleifend condimentum urna odio inceptos bibendum curae imperdiet laoreet nunc tellus, class ultricies vivamus primis.</p>
-          <img src="images/blog/blog-2.jpg" class="img-responsive" alt="Blog image 1">
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-4">
-        <div class="section-14-box wow fadeInUp" data-wow-delay=".3s">
-          <img src="images/blog/blog-3.jpg" class="img-responsive" alt="Blog image 1">
-          <h3><a href="#">Medicine Sale Market</a></h3>
-          <div class="row">
-            <div class="col-md-12 col-lg-12">
-              <div class="comments">
-                <a class="btn btn-primary btn-sm">July, 30, 30</a>
-                <a href="#" class="btn btn-primary btn-sm">rkwebdes</a>
-              </div>
-            </div>
-          </div>
-          <p>Laoreet eleifend condimentum urna odio inceptos bibendum curae imperdiet laoreet nunc tellus, class ultricies vivamus primis.</p>
-        </div>
-      </div>
+        </div> <!-- end carosel-inner --> 
+      </div> <!-- end Quotes -->
     </div>
   </div>
 </section>
--->
-<!---
-<section id="section9" class="section-margine section-9-background">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/1.png" class="img-responsive wow fadeInUp" alt=""></div>
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/2.png" class="img-responsive wow fadeInUp" alt=""></div>
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/3.png" class="img-responsive wow fadeInUp" alt=""></div>
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/4.png" class="img-responsive wow fadeInUp" alt=""></div>
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/5.png" class="img-responsive wow fadeInUp" alt=""></div>
-      <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/6.png" class="img-responsive wow fadeInUp" alt=""></div>
-    </div>
-  </div>
-</section>-->
 
 <?php include 'includes/templates/footer.php'?>

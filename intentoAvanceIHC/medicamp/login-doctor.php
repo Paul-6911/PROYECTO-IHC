@@ -1,7 +1,10 @@
 <?php  
+  ob_start();
    require 'includes/config/database.php';
    $db = conectarDB();
    $errores = [];
+   $correo = 'dsd@gmail.com';
+   $contrasenia = '&$sbd';
 
    //validacion
    if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -21,9 +24,9 @@
        $valor = mysqli_fetch_assoc($resultado);
       
        if($valor === NULL){
-         header("Location: http://localhost:3000/login-doctor.php");
+         header('Location: http://localhost:3000/login-doctor.php');
        }else{
-         header("Location: http://localhost:3000/index.php");
+         header('Location: http://localhost:3000/doctor-paciente.php');
        } 
      }
    }
@@ -49,8 +52,9 @@ include 'includes/templates/header.php' ?>
         <div class="container-login">
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Doctor</h4>
-          <form action="/login-doctor.php" method="POST">
-            <label for="usuario-doctor">Correo</label>
+          <!---action="/login-doctor.php"--->
+          <form action= " <?php echo empty($errores) === TRUE ? 'login-doctor.php': 'doctor-paciente.php';?>" method="POST">
+            <label for="usuario-doctor">Usuario</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-doctor" name="correo">
             <label for="password-doctor">Contraseña</label>
             <input type="password" placeholder="Ingrese su contraseña" name="contrasenia">

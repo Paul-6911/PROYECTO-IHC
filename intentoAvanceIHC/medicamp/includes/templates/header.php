@@ -33,7 +33,7 @@
     <div class="container">
       <div class="row ">
         <ul class="contact-detail2 col-md-6 pull-left">
-           <li> <a href="#" target="_blank"><i class="fa fa-mobile" style="color: #333"></i>459 123 721</a></li>
+           <li> <a href="#" target="_blank"><i class="fa fa-mobile" style="color: #333"></i>+(51) 987-654-321</a></li>
            <li> <a href="#" target="_blank"><i class="fa fa-envelope-o" style="color: #333"></i>mediSalud@gmail.com</a></li>
         </ul>
         <div class="social-links col-md-6 pull-right">
