@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-md-4 col-lg-4">
         <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;">
-          <div class="section-4-box-icon-cont"><i class="fas fa-brain fa-2x" style="padding: 10px;"></i></div>
+          <div class="section-4-box-icon-cont"><i class="fas fa-brain fa-2x"></i></div>
           <div class="section-4-box-text-cont">
             <a class="nombreEspecialidad">
             <h5>Neurología</h5>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;" data-wow-delay=".1s">
-          <div class="section-4-box-icon-cont"><i class="fas fa-heartbeat fa-2x" style="padding: 10px;"></i></div>
+          <div class="section-4-box-icon-cont"><i class="fas fa-heartbeat fa-2x"></i></div>
           <div class="section-4-box-text-cont">
             <a class="nombreEspecialidad">
             <h5>Cardiología</h5>
@@ -48,7 +48,7 @@
       </div>
       <div class="col-md-4 col-lg-4">
         <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;">
-          <div class="section-4-box-icon-cont"><i class="fas fa-allergies fa-2x" style="padding: 10px;"></i></div>
+          <div class="section-4-box-icon-cont"><i class="fas fa-allergies fa-2x"></i></div>
           <div class="section-4-box-text-cont">
             <a class="nombreEspecialidad">
             <h5>Dermatología</h5>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;" data-wow-delay=".1s">
-          <div class="section-4-box-icon-cont"><i class="fas fa-x-ray fa-2x" style="padding: 10px;"></i></i></div>
+          <div class="section-4-box-icon-cont"><i class="fas fa-x-ray fa-2x"></i></i></div>
           <div class="section-4-box-text-cont">
             <a class="nombreEspecialidad">
             <h5>Radiología</h5>
@@ -75,7 +75,7 @@
         <!---<img src="images/s2.png" class="img-responsive wow zoomIn" alt=""></div>--->
         <div class="col-md-4 col-lg-4">
           <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;" data-wow-delay=".2s">
-            <div class="section-4-box-icon-cont"><i class="fa fa-stethoscope fa-2x" style="padding: 10px;"></i></div>
+            <div class="section-4-box-icon-cont"><i class="fa fa-stethoscope fa-2x"></i></div>
             <div class="section-4-box-text-cont">
               <a class="nombreEspecialidad">
               <h5>Pediatría</h5>
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div class="section-4-box wow fadeIn" style="background-color:#eaf8ff; border-radius: 30px; margin-bottom: 25px;" data-wow-delay=".2s">
-            <div class="section-4-box-icon-cont"><i class="far fa-eye fa-2x" style="padding: 10px;"></i></div>
+            <div class="section-4-box-icon-cont"><i class="far fa-eye fa-2x"></i></div>
             <div class="section-4-box-text-cont">
               <a class="nombreEspecialidad">
               <h5>Oftalmología</h5>

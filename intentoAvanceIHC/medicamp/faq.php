@@ -67,10 +67,10 @@ rapida y sencilla a las citas las veces que se necesite.</p>
           <br><br><br><br>
           <img src="https://thumbs.dreamstime.com/b/el-car%C3%A1cter-pensativo-del-doctor-que-tiene-muchas-preguntas-vector-el-ejemplo-94450002.jpg" alt="">
         </div>
-        
+
       </div>
     </div>
   </div>
 </section>
 
-<?php include 'includes/templates/footer.php'?>
+<?php include 'includes/templates/footer.php'?> 

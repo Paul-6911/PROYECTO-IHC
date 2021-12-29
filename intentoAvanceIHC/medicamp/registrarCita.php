@@ -145,7 +145,6 @@
               <input type="text" value="<?php echo $_POST['doctor'] ?>">
               <label for="hora">Horario</label>
               <input type="text" value="<?php echo $_POST['horario'] ?>">
-            <!---  <input type="date"> --->
             </div>
           </fieldset>
         </form>
