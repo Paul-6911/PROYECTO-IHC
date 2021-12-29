@@ -239,10 +239,8 @@
                   </fieldset>
                   <div class="botones-form-registro">
                         <input type="submit" value="Registrar al Seguro">
-                        <div>
-                          <input id="add" type="button" value="Asegurar un familiar" onclick="addNew()" style="visibility: hidden;"/>
-                          <input id="remove" type="button" value="Quitar este formulario de familiar" onclick="removeLastElem()" style="visibility: hidden;"/>
-                        </div>
+                        <input id="add" type="button" value="Asegurar un familiar" onclick="addNew()" />
+                        <input id="remove" type="button" value="Quitar este formulario de familiar" onclick="removeLastElem()" style="visibility: hidden;"/>
                       </div>
               </form>
             </div>

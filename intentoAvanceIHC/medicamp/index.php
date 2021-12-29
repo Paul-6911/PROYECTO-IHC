@@ -146,49 +146,49 @@
         <div class="col-md-4 col-sm-12">
           <div class="section-2-box-right wow fadeInRight">
             <h3>Nuestra Ubicación</h3>
-            <p style="text-align: justify;">MediSalud se encuentra en Jr. Almte. Miguel Grau 309, en el distrito de Santiago de Surco. Nuestro horario de atención es en los siguientes horarios:</p>
+            <p style="text-align: justify;">MediSalud se encuentra en San Borja, en Av.Randomrandom 3923. Nuestro horario de atención es en los siguientes horarios:</p>
             <ul> 
               <li><b>Lunes - Viernes:</b> 8am - 18pm</li>
               <li><b>Sábado:</b> 8am - 16pm</li> 
               <li><b>Domingo:</b> Únicamente Área de Emergencias.</li> 
             </ul>
             <p style="text-align: justify;">Puedes ubicarnos en el mapa presionando la opción siguiente.</p>
-            <a data-toggle="modal" target="_blank" href="https://www.google.com/maps/place/Jr.+Almte.+Miguel+Grau+309,+Santiago+de+Surco+15049/@-12.144142,-77.005425,16z/data=!4m5!3m4!1s0x9105b81c6de0c541:0x84e698038ee3da56!8m2!3d-12.1441423!4d-77.0054247?hl=es-419" class="btn btn-default">Ubicación en Mapa</a>
+            <a data-toggle="modal" target="_blank" href="https://www.google.com/maps/search/clinica+san+borja/@-12.0978085,-77.0043441,15z/data=!3m1!4b1" class="btn btn-default">Ubicación en Mapa</a>
           </div>
         </div>
     </div>
   </div>
 </section>
 
-<section id="section3" class="section-margine section3-background" style="background-image: url(images/img-contador.jpg);">
+<section id="section3" class="section-margine section3-background">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6">
-        <div class="section-3-box" >
+        <div class="section-3-box">
           <figure><i class="fa fa-desktop fa-2x"></i></figure>
-          <h3 style="color:#000000;"><span class="counter">30</span>+</h3>
-          <h4 style="color:#000000;">Doctores a su disposición</h4>
+          <h3><span class="counter">1000</span>+</h3>
+          <h4>Doctors & Nurses</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="section-3-box">
           <figure><i class="fa fa-group fa-2x"></i></figure>
-          <h3 style="color:#000000;"><span class="counter">60</span>+</h3>
-          <h4 style="color:#000000;">Habitaciones</h4>
+          <h3><span class="counter">1520</span>+</h3>
+          <h4>Total Rooms</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="section-3-box">
           <figure><i class="fa fa-coffee fa-2x"></i></figure>
-          <h3 style="color:#000000;"><span class="counter">1000</span>+</h3>
-          <h4 style="color:#000000;">Pacientes Recuperados</h4>
+          <h3><span class="counter">50</span>+</h3>
+          <h4>Cureds Cases</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="section-3-box">
           <figure><i class="fa fa-glass fa-2x"></i></figure>
-          <h3 style="color:#000000;"><span class="counter">10</span>+</h3>
-          <h4 style="color:#000000;">Premios a Nivel Nacional</h4>
+          <h3><span class="counter">400</span>+</h3>
+          <h4>Awards Shows</h4>
         </div>
       </div>
     </div>
@@ -247,7 +247,7 @@
   </div>
 </section>
 --->
-<!---
+
 <section  id="section5" class="section-5 section-margine">
   <div class="container">
     <div class="row my-team">
@@ -332,7 +332,7 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!---
 <section id="section10" class="section-10-background">
   <div class="container">
@@ -415,6 +415,30 @@
   </div>
 </section>
 -->
+<section id="section8" class="mytestimonial">
+  <div class="container">
+    <div class="row">
+      <div data-ride="carousel" class="carousel slide" id="testimonial">
+        <ol class="carousel-indicators">
+          <li data-target="#testimonial" data-slide-to="0" class="active"><img alt="Testimonial" class="img-responsive" src="images/people/f1.png">
+          </li>
+          <li data-target="#testimonial" data-slide-to="1"><img alt="Testimonial" class="img-responsive" src="images/people/f2.png">
+          </li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item text-center quotes-detail active left">
+            <p class="client-quote" style="font-size: 150%;"><i class="fa fa-quote-left"></i>La salud no lo es todo, pero sin ella todo lo demás es nada.<i class="fa fa-quote-right "></i></p>
+            <h5 class="client-name">Arthur Schopenhauer</h5>             
+          </div>
+          <div class="item text-center quotes-detail next left">
+            <p class="client-quote" style="font-size: 150%"><i class="fa fa-quote-left "></i>Que tu medicina sea tu alimento y el alimento tu medicina.<i class="fa fa-quote-right "></i></p>
+            <h5 class="client-name">Hipócrates</h5>
+          </div>
+        </div> <!-- end carosel-inner --> 
+      </div> <!-- end Quotes -->
+    </div>
+  </div>
+</section>
 <!---
 <section id="section9" class="section-9-background">
   <div class="container">

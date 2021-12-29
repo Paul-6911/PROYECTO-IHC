@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-lg-6">
-        <h2>Contáctenos</h2>
+        <h2>Contactanos</h2>
       </div>
       <div class="col-md-6 col-lg-6">
         <div class="breadcrumbs">
@@ -26,7 +26,8 @@
           <div class="loc-icon">
             <i class="fa fa-phone fa-2x" style="color:#00aef0"></i>
           </div>
-          <span class="loc-content">+(51) 987-654-321</span>
+          <span class="loc-content">+(000)123-456-789</span>
+          <span class="loc-content">+(000)9849-494-875</span>
         </div>
       </div>
       <div class="col-md-4">
@@ -52,7 +53,7 @@
           <!-- successfully -->
           <p class="success alert alert-success"><i class="fa fa-check"></i> Your message has been sent successfully. </p>
           <!-- unsuccessfully -->
-          <p class="error alert alert-danger" style="color: white;"><i class="fa fa-times"></i> El correo electrónico debe ser válido y el mensaje debe tener al menos 1 palabra </p>
+          <p class="error alert alert-danger"><i class="fa fa-times"></i> E-mail must be valid and message must be longer than 1 character. </p>
           <div class="control-group form-group">
             <div class="controls">
               <input  class="form-control" id="cf-name" type="text" name="cf-name" placeholder="Nombre">
