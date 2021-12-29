@@ -53,7 +53,7 @@
           <!-- successfully -->
           <p class="success alert alert-success"><i class="fa fa-check"></i> Your message has been sent successfully. </p>
           <!-- unsuccessfully -->
-          <p class="error alert alert-danger"><i class="fa fa-times"></i>  </p>
+          <p style="color:white" class="error alert alert-danger"><i class="fa fa-times"></i> El campo correo debe estar completo y el campo mensaje debe tener al menos una palabra   </p>
           <div class="control-group form-group">
             <div class="controls">
               <input  class="form-control" id="cf-name" type="text" name="cf-name" placeholder="Nombre">
@@ -67,7 +67,7 @@
           </div>
           <div class="control-group form-group">
             <div class="controls">
-             <input class="form-control" id="cf-subject" type="text" name="cf-subject" placeholder="Asunto">
+             <input class="form-control" id="cf-subject" type="text" name="cf-subject" placeholder="Telefono">
             </div>
           </div>
           <div class="control-group form-group">

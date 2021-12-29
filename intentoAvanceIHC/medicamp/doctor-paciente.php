@@ -142,9 +142,9 @@
 <section id="section18" class="section-margine">
     <div class="container">
         <div class="col-md-4 col-lg-6 wow fadeInUp" data-wow-delay=".2s">
-        <div class="section-18-img">
+        <!-- <div class="section-18-img">
             <img src="../images/portfolio/doctor28.jpg"  class="img-responsive" alt=""/>
-        </div>
+        </div> -->
         </div>
         <div class="section18">
             <div class="container" style="justify-content: center; display: flex; margin-bottom: -15px;">
@@ -186,7 +186,7 @@
               <ul>
                 <h4><b style="color: black; font-weight: bold;">Nombre:</b><b> <?php echo $persona[0]?></b></h4>
                 <h4><b style="color: black; font-weight: bold;">Apellido:</b><b> <?php echo $persona[1]?> </b></h4>
-                <h4><b style="color: black; font-weight: bold;">Fecha Cita:</b><b> Miércoles 05 de Enero del 2022 </b></h4>
+                <!-- <h4><b style="color: black; font-weight: bold;">Fecha Cita:</b><b> Miércoles 05 de Enero del 2022 </b></h4> -->
               </ul>
             </div>
         </div>

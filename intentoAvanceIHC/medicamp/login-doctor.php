@@ -49,7 +49,7 @@ include 'includes/templates/header.php' ?>
         <div class="container-login">
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Doctor</h4>
-          <form action="/login-doctor.php" method="POST">
+          <form  action= " <?php echo empty($errores) === TRUE ? 'login-doctor.php': 'doctor-paciente.php';?>" method="POST">
             <label for="usuario-doctor">Correo</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-doctor" name="correo">
             <label for="password-doctor">Contraseña</label>
