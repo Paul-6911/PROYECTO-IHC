@@ -1,0 +1,63 @@
+INSERT INTO doctor VALUES (1, 'Julia Elisa', 'Abad Centella', 'julia_abadc@hotmail.com', 'Cardiología', '78787878', '987654312', 'Femenino', 'juliaabad', 1, 'Martes 14pm - 16pm');
+
+INSERT INTO doctor VALUES (2, 'Óscar Manuel', 'Arrunátegui Pérez', 'oscar_arrunateguip@hotmail.com', 'Neurología', '78787877', '987654213', 'Masculino', 'oscararrunategui', 2, 'Martes 8am - 10:30am');
+
+INSERT INTO doctor VALUES (3, 'Pedro Alfonso', 'Beteta Solórzano', 'pedro_betetas@hotmail.com', 'Neurología', '78787876', '999999920', 'Masculino', 'pedrobeteta', 3, 'Lunes 8am - 10am'); 
+
+INSERT INTO doctor VALUES (4, 'Adriana Nicole', 'Bustíos Peña', 'adriana_bustiosp@hotmail.com', 'Oftalmología', '78787875', '991010101', 'Femenino', 'adrianabustios', 1, 'Miércoles 8am - 10am');
+
+INSERT INTO doctor VALUES (5, 'Verónica', 'Calderón Albites', 'veronica_calderona@hotmail.com', 'Neurología', '78787874', '991010110', 'Femenino', 'veronicacalderon', 1, 'Martes 14pm - 15:30pm');
+
+INSERT INTO doctor VALUES (6, 'Aldo Ernesto', 'Díaz Jáuregui', 'aldo_diazj@hotmail.com', 'Dermatología', '78787873', '989898989', 'Masculino', 'aldodiaz', 1, 'Lunes 8am - 9:30am');
+
+INSERT INTO doctor VALUES (7, 'Mirella Leonor', 'Foster de la Torre', 'mirella_fosterd@hotmail.com', 'Cardiología', '78787872', '900000012', 'Femenino', 'mirellafoster', 1, 'Martes 8am - 10am');
+
+INSERT INTO doctor VALUES (8, 'Leonardo Misael', 'Fuentes Urrutia', 'leonardo_fuentesu@hotmail.com', 'Dermatología', '78787871', '900000013', 'Masculino', 'leonardofuentes', 1, 'Lunes 16pm - 18pm');
+
+INSERT INTO doctor VALUES (9, 'Anthony', 'Hidalgo Briceño', 'anthony_hidalgob@hotmail.com', 'Radiología', '78787870', '900000024', 'Masculino', 'anthonyhidalgo', 1, 'Martes 16pm - 18pm');
+
+INSERT INTO doctor VALUES (10, 'Paulo Toribio', 'Hilton Fernández', 'paulo_hiltonf@hotmail.com', 'Radiología', '78787869', '912345687', 'Masculino', 'paulohilton', 1, 'Miércoles 10am - 11:30am');
+
+INSERT INTO doctor VALUES (11, 'Sandra Susana', 'Ibarra Otoya', 'sandra_ibarrao@hotmail.com', 'Neurología', '78787868', '955779911', 'Femenino', 'sandraibarra', 1, 'Lunes 16pm - 18pm');
+
+INSERT INTO doctor VALUES (12, 'Lila Naomí', 'Ishiguro Jiménez', 'lila_ishiguroj@hotmail.com', 'Pediatría', '78787867', '933698755', 'Femenino', 'lilaishiguro', 1, 'Lunes 14pm - 16pm');
+
+INSERT INTO doctor VALUES (13, 'Juan Francisco', 'Llanos Teijeiro', 'juan_llanost@hotmail.com', 'Cardiología', '78787866', '901233210', 'Masculino', 'juanllanos', 1, 'Lunes 10am - 11:30am');
+
+INSERT INTO doctor VALUES (14, 'Santiago Eduardo', 'Losada Reátegui', 'santiago_losadar@hotmail.com', 'Oftlamología', '78787865', '999000333', 'Masculino', 'santiagolosada', 1, 'Lunes 14pm - 16pm');
+
+INSERT INTO doctor VALUES (15, 'Pamela Roxana', 'Luján Abregú', 'pamela_lujana@hotmail.com', 'Dermatología', '78787864', '999888777', 'Femenino', 'pamelalujan', 1, 'Martes 9:30am - 11am');
+
+INSERT INTO doctor VALUES (16, 'Gael Omar', 'Merino Espejo', 'gael_merinoe@hotmail.com', 'Pediatría', '78787863', '999990001', 'Masculino', 'gaelmerino', 1, 'Martes 15:30pm - 18pm');
+
+INSERT INTO doctor VALUES (17, 'Carmen Rosa', 'Montalvo Dos Santos', 'carmen_montalvod@hotmail.com', 'Radiología', '78787861', '909080706', 'Femenino', 'carmenmontalvo', 1, 'Lunes 11:30am - 13:30pm');
+
+INSERT INTO doctor VALUES (18, 'Néstor', 'Núñez Hinostroza', 'nestor_nuñezh@hotmail.com', 'Oftalmología', '78787860', '912121213', 'Masculino', 'nestornuñez', 1, 'Martes 8am - 10am');
+
+INSERT INTO doctor VALUES (19, 'Victoria de los Ángeles', 'Olórtegui Li', 'victoria_olorteguil@hotmail.com', 'Oftalmología', '78787859', '984475834', 'Femenino', 'victoriaolortegui', 1, 'Lunes 11:30am - 13:30pm');
+
+INSERT INTO doctor VALUES (20, 'Andrés Gastón', 'Ortega Espinola', 'andres_ortegae@hotmail.com', 'Dermatología', '78787858', '922289213', 'Masculino', 'andresortega', 1, 'Jueves 14pm - 16pm');
+
+INSERT INTO doctor VALUES (21, 'Juan Cristóbal', 'Palao Torregrosa', 'juan_palaot@hotmail.com', 'Cardiología', '78787857', '977256732', 'Masculino', 'juanpalao', 1, 'Lunes 16pm - 18pm');
+
+INSERT INTO doctor VALUES (22, 'Ashley Susana', 'Puelles Montana', 'ashley_puellesm@hotmail.com', 'Pediatría', '78787856', '978978636', 'Femenino', 'ashleypuelles', 1, 'Miércoles 14pm - 15:30pm');
+
+INSERT INTO doctor VALUES (23, 'Estrella Jesusa', 'Reyes Quiñones', 'estrella_reyesq@hotmail.com', 'Pediatría', '78787855', '998128852', 'Femenino', 'estrellareyes', 1, 'Lunes 8am - 10am');
+
+INSERT INTO doctor VALUES (24, 'José Ignacio', 'Rueda de Molina', 'jose_ruedad@hotmail.com', 'Radiología', '78787854', '993330952', 'Masculino', 'joserueda', 1, 'Miércoles 16pm - 18pm');
+
+INSERT INTO doctor VALUES (25, 'Saúl Arturo', 'Salvatierra Yamamoto', 'saul_salvatierray@hotmail.com', 'Oftalmología', '78787853', '919023453', 'Masculino', 'saulsalvatierra', 1, 'Lunes 8am - 10am');
+
+INSERT INTO doctor VALUES (26, 'Kiara Paola', 'Taboada Sevilla', 'kiara_taboadas@hotmail.com', 'Neurología', '78787852', '922334455', 'Femenino', 'kiarataboada', 1, 'Jueves 8am - 9:30am');
+
+INSERT INTO doctor VALUES (27, 'Melva', 'Torre Chumpitaz', 'melva_torrec@hotmail.com', 'Cardiología', '78787851', '900005432', 'Femenino', 'melvatorre', 1, 'Miércoles 8am - 10am');
+
+INSERT INTO doctor VALUES (28, 'Braulio Héctor', 'Torre Morales', 'braulio_torrem@hotmail.com', 'Dermatología', '78787850', '990099009', 'Masculino', 'brauliotorre', 1, 'Miércoles 8am - 10am');
+
+INSERT INTO doctor VALUES (29, 'Luis Ángel', 'Torroja Villareal', 'luis_torrojav@hotmail.com', 'Neurología', '78787849', '983237434', 'Masculino', 'luistorroja', 1, 'Miércoles 8am - 10am');
+
+INSERT INTO doctor VALUES (30, 'Marcos Lorenzo', 'Wilhelm Eguren', 'marcos_wilhelme@hotmail.com', 'Radiología', '78787848', '959392392', 'Masculino', 'marcoswilhelm', 1, 'Martes 10:30am - 12:30pm');
+
+INSERT INTO doctor VALUES (31, 'Narciso', 'Yesán Ortega', 'narciso_yesano@hotmail.com', 'Dermatología', '78787847', '924487296', 'Masculino', 'narcisoyesan', 1, 'Miércoles 11:30am - 13pm');
+
+INSERT INTO doctor VALUES (32, 'Gabriela Estefania', 'Zapata Alarcón', 'gabriela_zapataa@hotmail.com', 'Pediatría', '78787846', '920092452', 'Femenino', 'gabrielazapata', 1, 'Jueves 16pm - 18pm');
