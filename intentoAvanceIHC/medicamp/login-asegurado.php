@@ -2,6 +2,10 @@
         require 'includes/config/database.php';
         $db = conectarDB();
         $errores = [];
+        $valor = '';
+        echo "<pre>";
+        var_dump($_POST);
+        echo "</pre>";
 
         //validacion
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -24,7 +28,7 @@
               header("Location: http://localhost:3000/login-asegurado.php");
             }else{
               header("Location: http://localhost:3000/portfolio-4.php");
-            } 
+            }
           }
         }
         include 'includes/templates/header.php';
@@ -49,8 +53,8 @@
         <div class="container-login">
           <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
           <h4>Iniciar Sesión - Asegurado</h4>
-          <form method="POST" action="/portfolio-4.php">
 
+          <form method="POST" action= " <?php echo empty($errores) === TRUE ?  'login-asegurado.php': 'portfolio-4.php';?> " >
             <label for="usuario-asegurado">Usuario</label>
             <input type="email" placeholder="Ingrese su correo electrónico" id="usuario-asegurado" name="correo">
             <label for="password-asegurado">Contraseña</label>
@@ -59,28 +63,13 @@
             <a href="forgotten-password.php">¿Olvidaste tu contraseña?</a><br>
             <a href="form-aseguramiento.php">Asegúrate a MediSalud</a>
           </form>
+
         </div>
       </div>
     </div>
   </div>
 </section>
-<!---
-<section>
-  <div class="container-login">
-    <img class="logo-favicon" src="images/logo-iniciosesion.png" alt="Logo MediSalud">
-    <h4>Iniciar Sesión - Asegurado</h4>
-    <form class="" action="" method="post">
-      <label for="usuario-asegurado">Usuario</label>
-      <input type="text" placeholder="Ingrese su usuario">
-      <label for="password-asegurado">Contraseña</label>
-      <input type="password" placeholder="Ingrese su contraseña">
-      <input type="submit" value="Iniciar sesión">
-      <a href="#">¿Olvidaste tu contraseña?</a><br>
-      <a href="#">¿Aún no tienes una cuenta?</a>
-    </form>
-  </div>
-</section>
---->
+
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.plugin.min.js"></script>

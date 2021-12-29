@@ -1,11 +1,49 @@
 <?php
     require 'includes/config/database.php';
-    $DB = conectarDB();
+    
 
-    $query = "SELECT ID_Doctor FROM doctor WHERE Apellido_Doctor = $_POST[doctor]";
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+    $separado = explode(',', $_POST["doctor"]);
+    $apellido = trim($separado[0]);
+    $correo = $_POST['email'];
+
+    $db = conectarDB();
+      $query = "SELECT * FROM doctor WHERE Apellido_Doctor = '$apellido' ";
+      $resultado = mysqli_query($db,$query);
+      $row = mysqli_fetch_assoc($resultado);
+      $idDoc = $row['ID_Doctor'];
+      $nombreDoc = $row['Nombre_Doctor'];
+      $apellDoc = $row['Apellido_Doctor'];
+      $nomCompleto = $nombreDoc.", ".$apellDoc;
+      $especialidadDoc = $row['Especialidad'];
+     // echo "$nombreDoc"." "."$apellDoc";
+    mysqli_close($db);
+
+    
+    $db = conectarDB();
+      $query2 = "SELECT * FROM asegurados WHERE Correo_Asegurado = '$correo' ";
+      $resultado2 = mysqli_query($db,$query2);
+      $row2 = mysqli_fetch_assoc($resultado2);
+      $idAseg = $row2['ID_Asegurado'];
+      $nombreAseg = $row2['Nombre_Asegurado'];
+      $apellidoAseg = $row2['Apellido_Asegurado'];
+     // echo "$nombreAseg"." "."$apellidoAseg";
+    mysqli_close($db);
+
+    
+
+    $db = conectarDB();
+       $query3 = "INSERT INTO atencion (ID_Doctor_Atencion,Nombre_Doctor_Atencion,Especialidad_Atencion, ID_Asegurado_Atencion,Nombre_Asegurado_Atencion,Apellido_Asegurado_Atencion) VALUES ('$idDoc','$nomCompleto','$especialidadDoc','$idAseg','$nombreAseg','$apellidoAseg')";
+       if (!mysqli_query($db, $query3)) {
+         print("error");
+         // var_dump(mysqli_error($db));
+        }
+        // $resultado3 = mysqli_query($db,$query3);
+        // $row3 = mysqli_fetch_assoc($resultado3);
+        
+    mysqli_close($db);
+    //echo "$nomCompleto"." "."$nombreAseg";
+
+  
 
 ?>
 
@@ -97,12 +135,12 @@
 </section>
 
 <div class="formulario-registrar">
-        <form action="" class="form-reg">
+        <form action="/citaConfirmada.php" method="POST" class="form-reg">
           <fieldset>
             <legend>Validar los datos Registrados</legend>
             <div class="campos">
               <label for="Correo">Correo</label>
-              <input type="text" value="<?php echo $_POST['email'] ?>">
+              <input type="text" value="<?php echo $_POST['email'] ?>" name="correo">
               <label for="Doctor">Doctor</label>
               <input type="text" value="<?php echo $_POST['doctor'] ?>">
               <label for="hora">Horario</label>
@@ -112,7 +150,6 @@
         </form>
 
         <a class="confirmar" href="citaConfirmada.php">Confirmar cita</a>
-        <a class="confirmar" href="portfolio-4.php">Volver</a>
 </div>
 
 

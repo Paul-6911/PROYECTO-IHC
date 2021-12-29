@@ -1,5 +1,4 @@
 <?php
-
     $correo ='';
     $contrasenia ='';
 
@@ -8,6 +7,9 @@
       $contrasenia = $_POST['contrasenia'];
     }
 
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -190,63 +192,62 @@
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
+          <div class="img-descripcionDoctor">
+            <a href="registrarCita.php"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
             <form action="/registrarCita.php" method="POST">
-              <div class="img-descripcionDoctor">
-              <a href="registrarCita.php"><img src="images/portfolio/doctor2.jpg" class="imagenDoctor img-responsive" alt="image" style="width:100%;"></a>
-              <div class="descripcionDoctor">
-                <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
-                  <h6>Neurología</h6>
-                  <input class="ocultar" type="text" name="doctor" value="ARRUNÁTEGUI PÉREZ, ÓSCAR MANUEL">
-                  <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
-                  <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
-                  <input class="ocultar" type="text" name="horario" value="Martes 8am-10:30 am">
-                </div>
-                <div class="datosDoctor">
-                  <div class="nombreDoctor">Arrunátegui Pérez, Óscar Manuel<br></div>
-                  <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div> class="sedeDoctor"--->
-                  <br>
-                </div> 
-              </div>
-              <div class="descripcion_horario">
-                <div class="box-horario">
-                  <div class="dia-horario">
-                    Martes
-                  </div><h6>8am-10:30am</h6>
-                 
-                </div>
-                <input type="submit" class="box-reservarCita" value="Reservar Cita">
-              </div>
-            </form>
+                  <div class="descripcionDoctor">
+                    <div class="especialidad-descripcionDoctor"><!--class="especialidad-descripcionDoctor"-->
+                      <h6>Cardiología</h6>
+                    </div>
+                    <div class="datosDoctor">
+                      <div class="nombreDoctor">Arrunátegui Pérez, Óscar Manuel<br></div>
+                      <input class="ocultar" type="text" name="doctor" value="Arrunategui Perez, Oscar Manuel">
+                      <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                      <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                      <input class="ocultar" type="text" name="horario" value="Martes 8am - 10:30am">
+                      <!--<div class="sedeDoctor">Sede Villa María del Triunfo</div> class="sedeDoctor"--->
+                      <br>
+                    </div> 
+                  </div>
+                  <div class="descripcion_horario">
+                    <div class="box-horario">
+                      <div class="dia-horario">
+                        Martes
+                      </div><h6>8am - 10:30am</h6>
+                    </div>
+                    <input type="submit" class="box-reservarCita" value="Reservar Cita">
+                  </div>
+                </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 neurologia villamaria text-center">
             <form action="/registrarCita.php" method="POST">
               <div class="img-descripcionDoctor">
-                <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
-                <div class="descripcionDoctor">
-                  <div class="especialidad-descripcionDoctor">
-                    <h6>Neurología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="BETETA SOLÓRZANO, PEDRO ALFONSO">
-                    <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
-                    <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
-                    <input class="ocultar" type="text" name="horario" value="Lunes 8 am - 10 am">
+                  <a href="registrarCita.php"><img src="images/portfolio/doctor33.jpg" alt="image" class="imagenDoctor img-responsive"></a>
+                  <div class="descripcionDoctor">
+                        <div class="especialidad-descripcionDoctor">
+                          <h6>Neurología</h6>
+                          <input class="ocultar" type="text" name="doctor" value="Beteta Solorzano, Pedro Alfonso">
+                          <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
+                          <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
+                          <input class="ocultar" type="text" name="horario" value="Lunes 8 am - 10 am">
+                        </div>
+                        <div class="datosDoctor">
+                          <div class="nombreDoctor">Beteta Solórzano, Pedro Alfonso<br></div>
+                          <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
+                          <br>
+                        </div>
                   </div>
-                  <div class="datosDoctor">
-                    <div class="nombreDoctor">Beteta Solórzano, Pedro Alfonso<br></div>
-                    <!---<div class="sedeDoctor">Sede Villa María del Triunfo</div>-->
-                    <br>
+                  <div class="descripcion_horario">
+                        <div class="box-horario">
+                                <div class="dia-horario">
+                                  Lunes
+                                </div><h6>8am-10am</h6>
+                        
+                        </div>
+                        <input type="submit" class="box-reservarCita" value="Reservar Cita">
                   </div>
-                </div>
-                <div class="descripcion_horario">
-                  <div class="box-horario">
-                    <div class="dia-horario">
-                      Lunes
-                    </div><h6>8am-10am</h6>
-                   
-                  </div>
-                  <input type="submit" class="box-reservarCita" value="Reservar Cita">
-                </div>
               </form>
             </div>
             <br> <!--Da espacio para el transform: scale(1.05) de los doctores de la última fila parte inferior-->
@@ -258,7 +259,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Bustíos Peña, Adriana Nicole">
+                    <input class="ocultar" type="text" name="doctor" value="Bustios Pena, Adriana Nicole">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miercoles 8am-10pm">
@@ -289,7 +290,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Neurología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Calderón Albites, Verónica">
+                    <input class="ocultar" type="text" name="doctor" value="Calderon Albites, Veronica">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Martes 14pm-15:30pm">
@@ -320,7 +321,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Díaz Jáuregui, Aldo Ernesto">
+                    <input class="ocultar" type="text" name="doctor" value="Diaz Jauregui, Aldo Ernesto">
                       <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                       <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                       <input class="ocultar" type="text" name="horario" value="Lunes 8am-9:30am">
@@ -413,7 +414,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Hidalgo Briceño, Anthony">
+                    <input class="ocultar" type="text" name="doctor" value="Hidalgo Briceno, Anthony">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Sabado 11am-13pm">
@@ -444,7 +445,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Hilton Fernández, Paulo Toribio">
+                    <input class="ocultar" type="text" name="doctor" value="Hilton Fernandez, Paulo Toribio">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 10am-11:30am">
@@ -506,7 +507,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Ishiguro Jiménez, Lila Naomí">
+                    <input class="ocultar" type="text" name="doctor" value="Ishiguro Jimenez, Lila Naomi">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
@@ -568,7 +569,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Llanos Teijeiro, Juan Francisco">
+                    <input class="ocultar" type="text" name="doctor" value="Losada Reategui, Santiago Eduardo">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Lunes 14pm-16pm">
@@ -599,7 +600,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Luján Abregú, Pamela Roxana">
+                    <input class="ocultar" type="text" name="doctor" value="Lujan Abregu, Pamela Roxana">
                       <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                       <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                       <input class="ocultar" type="text" name="horario" value="Martes 09:30am-11am">
@@ -692,7 +693,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Núñez Hinostroza, Néstor">
+                    <input class="ocultar" type="text" name="doctor" value="Nunez Hinostroza, Nestor">
                         <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                         <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                         <input class="ocultar" type="text" name="horario" value="Martes 8am-10am">
@@ -723,7 +724,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Olórtegui Li, Victoria de los Ángeles">
+                    <input class="ocultar" type="text" name="doctor" value="Olortegui Li, Victoria de los Angeles">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 16pm-18pm">
@@ -754,7 +755,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Ortega Espinola, Andrés Gastón">
+                    <input class="ocultar" type="text" name="doctor" value="Ortega Espinola, Andres Gaston">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Jueves 14pm-16pm">
@@ -785,7 +786,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Cardiología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Palao Torregrosa, Juan Cristóbal">
+                    <input class="ocultar" type="text" name="doctor" value="Palao Torregrosa, Juan Cristobal">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Lunes 16pm-18pm">
@@ -848,7 +849,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Reyes Quiñones, Estrella Jesusa">
+                    <input class="ocultar" type="text" name="doctor" value="Reyes Quinones, Estrella Jesusa">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Lunes 8am-10am">
@@ -879,7 +880,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Radiología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Rueda De Molina, José Ignacio">
+                    <input class="ocultar" type="text" name="doctor" value="Rueda De Molina, Jose Ignacio">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 16pm-18pm">
@@ -910,7 +911,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Oftalmología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Salvatierra Yamamoto, Saúl Arturo">
+                    <input class="ocultar" type="text" name="doctor" value="Salvatierra Yamamoto, Saul Arturo">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Lunes 8am-10am">
@@ -1004,7 +1005,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Torre Morales, Braulio Héctor">
+                    <input class="ocultar" type="text" name="doctor" value="Torre Morales, Braulio Hector">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 8am-10am">
@@ -1035,7 +1036,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Neurología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Torroja Villareal, Luis Ángel">
+                    <input class="ocultar" type="text" name="doctor" value="Torroja Villareal, Luis Angel">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 8am-10am">
@@ -1098,7 +1099,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Dermatología</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Yesán Ortega, Narciso">
+                    <input class="ocultar" type="text" name="doctor" value="Yesan Ortega, Narciso">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Miércoles 11:30am-13pm">
@@ -1129,7 +1130,7 @@
                 <div class="descripcionDoctor">
                   <div class="especialidad-descripcionDoctor">
                     <h6>Pediatría</h6>
-                    <input class="ocultar" type="text" name="doctor" value="Zapata Alarcón, Gabriela Estefania">
+                    <input class="ocultar" type="text" name="doctor" value="Zapata Alarcon, Gabriela Estefania">
                     <input class="ocultar" type="text" name="email" value=<?php echo $correo ?>>
                     <input class="ocultar" type="text" name="pass" value="<?php echo $contrasenia ?>">
                     <input class="ocultar" type="text" name="horario" value="Jueves 16pm-18pm">
