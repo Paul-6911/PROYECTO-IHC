@@ -1,18 +1,19 @@
 <?php
+    session_start();
     require 'includes/config/database.php';
     $personas = [];
     $i = 0;
     
     //validacion
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    
         $db = conectarDB();
-        $correo = $_POST['correo'];
-        $contrasenia = $_POST['contrasenia'];
+        $correo = $_SESSION['correo'];
+        $contrasenia = $_SESSION['contrasenia'];
         $query = "SELECT * FROM doctor WHERE Correo_Doctor = '$correo' AND Contrasenia_Doctor = '$contrasenia'";
 
         $consulta = mysqli_query($db,$query);
         $row = mysqli_fetch_assoc($consulta);
-        mysqli_close($db);
+        //mysqli_close($db);
 
         $db = conectarDB();
 
@@ -46,7 +47,7 @@
         mysqli_free_result($consulta2);
     
         //mysqli_close($db);
-    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -118,7 +119,7 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login-doctor.php" style="color:#00aef0"><i class="fas fa-user"></i> Cerrar Sesión</a></li>
+          <li><a href="salir.php?id=3" style="color:#00aef0"><i class="fas fa-user"></i> Cerrar Sesión</a></li>
         </ul>
       </div>
 </header>
@@ -142,9 +143,9 @@
 <section id="section18" class="section-margine">
     <div class="container">
         <div class="col-md-4 col-lg-6 wow fadeInUp" data-wow-delay=".2s">
-        <!-- <div class="section-18-img">
+        <div class="section-18-img">
             <img src="../images/portfolio/doctor28.jpg"  class="img-responsive" alt=""/>
-        </div> -->
+        </div>
         </div>
         <div class="section18">
             <div class="container" style="justify-content: center; display: flex; margin-bottom: -15px;">
@@ -186,7 +187,7 @@
               <ul>
                 <h4><b style="color: black; font-weight: bold;">Nombre:</b><b> <?php echo $persona[0]?></b></h4>
                 <h4><b style="color: black; font-weight: bold;">Apellido:</b><b> <?php echo $persona[1]?> </b></h4>
-                <!-- <h4><b style="color: black; font-weight: bold;">Fecha Cita:</b><b> Miércoles 05 de Enero del 2022 </b></h4> -->
+                <h4><b style="color: black; font-weight: bold;">Fecha Cita:</b><b> Miércoles 05 de Enero del 2022 </b></h4>
               </ul>
             </div>
         </div>

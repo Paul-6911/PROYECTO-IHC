@@ -67,7 +67,7 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login-asegurado.php" style="color:#00aef0">Salir</a></li>
+          <li><a href="salir.php" style="color:#00aef0">Salir</a></li>
     
          
         </ul>
@@ -86,7 +86,7 @@
 
 <div class="confirmada">
         <h2>Su cita se confirmo satisfactoriamente</h2>
-        <a class="confirmar" href="login-asegurado.php">Finalizar</a>
+        <a class="confirmar" href="salir.php?id=1">Finalizar</a>
         
 </div>
 
