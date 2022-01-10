@@ -2220,3 +2220,7 @@ p {
         justify-content:space-between;
     }
 }
+
+.no-pointer:hover{
+    cursor:auto;
+}

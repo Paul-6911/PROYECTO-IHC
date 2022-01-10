@@ -72,11 +72,11 @@
           <li><a href="services.php" style="color:#00aef0">Servicios </a></li>
           <!--<li><a href="portfolio-4.php" style="color:#00aef0">Doctores</a></li>-->
           <li><a href="faq.php" style="color:#00aef0">Preguntas Frecuentes</a></li>
+          <li><a href="doctores.php" style="color:#00aef0">Doctores</a></li>
           <li><a href="contact.php" style="color:#00aef0">Contáctenos</a></li>
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#00aef0"><i class="fas fa-user"></i> Iniciar Sesión <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="login-asegurado.php">Asegurado</a></li>
-              <!-- <li><a href="login-administrativo.php">Administrativo</a></li> -->
               <li><a href="login-doctor.php">Doctor</a></li>
             </ul>
           </li>

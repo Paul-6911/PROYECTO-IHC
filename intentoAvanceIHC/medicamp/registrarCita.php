@@ -1,10 +1,10 @@
 <?php
+    session_start();
     require 'includes/config/database.php';
     
-
     $separado = explode(',', $_POST["doctor"]);
     $apellido = trim($separado[0]);
-    $correo = $_POST['email'];
+    $correo = $_SESSION["correo"];
 
     $db = conectarDB();
       $query = "SELECT * FROM doctor WHERE Apellido_Doctor = '$apellido' ";
@@ -117,7 +117,7 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login-asegurado.php" style="color:#00aef0">Salir</a></li>
+          <li><a href="salir.php?id=1" style="color:#00aef0">Salir</a></li>
     
          
         </ul>
@@ -137,18 +137,15 @@
 <div class="formulario-registrar">
         <form action="/citaConfirmada.php" method="POST" class="form-reg">
           <fieldset>
-            <legend>Validar los datos Registrados</legend>
+            <legend>¿Seguro que desea reservar cita con el doctor?</legend>
             <div class="campos">
-              <label for="Correo">Correo</label>
-              <input type="text" value="<?php echo $_POST['email'] ?>" name="correo">
               <label for="Doctor">Doctor</label>
-              <input type="text" value="<?php echo $_POST['doctor'] ?>">
+              <input type="text" value="<?php echo $_POST['doctor'] ?>" readOnly>
               <label for="hora">Horario</label>
-              <input type="text" value="<?php echo $_POST['horario'] ?>">
+              <input type="text" value="<?php echo $_POST['horario'] ?>" readOnly>
             </div>
           </fieldset>
         </form>
-
         <a class="confirmar" href="citaConfirmada.php">Confirmar cita</a>
 </div>
 
